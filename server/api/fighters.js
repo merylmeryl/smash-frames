@@ -11,14 +11,4 @@ router.get('/', (req, res) => {
   });
 });
 
-router.post('/', (req, res) => {
-  var fighter = req.body.city;
-
-  Fighters.insert(fighter, (err, result) => {
-    if (err)
-      return res.json(err);
-    return res.json(result);
-  })
-});
-
 module.exports = router;

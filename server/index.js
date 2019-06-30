@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/api/fighters', require('./api/fighters'));
+app.use('/api/moves', require('./api/moves'));
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`);
