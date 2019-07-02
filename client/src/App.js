@@ -58,7 +58,7 @@ class App extends Component {
           <Col>
             <Jumbotron>
               <h1 className="display-3">Smash Frames</h1>
-              <img src="https://photos.app.goo.gl/o18fUUz2kV12pE5aA" />
+              <img src="https://smashframes-images.s3.us-east-2.amazonaws.com/600px-Smash_Ball.png" />
               <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
             </Jumbotron>
           </Col>
