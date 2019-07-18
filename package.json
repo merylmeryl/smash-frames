@@ -24,10 +24,13 @@
   },
   "homepage": "https://github.com/merylmeryl/smash-frames#readme",
   "dependencies": {
+    "babel": "^6.23.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "create-react-app": "^3.0.1",
+    "expect.js": "^0.3.1",
     "express": "^4.17.1",
+    "mocha": "^6.1.4",
     "pg": "^7.11.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"

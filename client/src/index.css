@@ -6,7 +6,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #E5E5E5;
 }
+
+.navbar {
+  height:70px;
+  background: #D75FC9;
+}
+
+.navTriangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 70px solid #425055;
+  border-right: 405px solid transparent;
+  left: 0;
+}
+
 
 .form-group {
   width: 275px;
@@ -19,9 +35,15 @@ body {
 }
 
 .centered {
-  text-align: center
+  text-align: center;
 }
 
 .moves {
-  margin-top:30px
+  margin-top:30px;
+}
+
+.timelineText {
+  font-size: 8px;
+  font-weight: bold;
+  margin-bottom: 0px;
 }

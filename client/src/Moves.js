@@ -1,5 +1,7 @@
 import React from 'react';
-import { Row, Col, Table } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
+import MoveBox from './components/MoveBoxComponent';
+import { parseMultihit } from './utilities/parseMultihit.js';
 
 const Moves = (props) => {
   const { data } = props;
@@ -11,7 +13,22 @@ const Moves = (props) => {
   return (
     <Row className="moves">
       <Col sm="12">
-        <Table className="table table-striped">
+        {data.map((move, i) =>
+          <div style={{ marginBottom: '100px' }}><MoveBox
+            key={i}
+            moveType={move.move_type}
+            moveName={move.move_name}
+            totalFrames={move.total_frames}
+            baseDamage={move.base_damage == null ? 0 : move.base_damage}
+            startup={move.startup_frames == null ? 0 : parseInt(parseMultihit(move.startup_frames))}
+            active={5}
+            recovery={
+              move.startup_frames == null || move.total_frames == null ? 0 : parseInt(parseMultihit(move.total_frames)) - parseInt(parseMultihit(move.startup_frames)) - 5}
+            notes={move.notes}
+          />
+          </div>
+        )}
+        {/* <Table className="table table-striped">
           <thead class="thead-dark">
             <tr>
               <td>Attack</td>
@@ -37,7 +54,7 @@ const Moves = (props) => {
                 <td>{move.hitbox_type}</td>
               </tr>)}
           </tbody>
-        </Table>
+        </Table> */}
       </Col>
     </Row>
   );
