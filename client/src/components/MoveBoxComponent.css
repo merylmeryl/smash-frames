@@ -1,0 +1,336 @@
+/* Big "box" that holds all the frame data (includes the title above the box) */
+
+.moveBox {
+  position: relative;
+  width: 90%;
+  height: 320px;
+  margin: auto;
+  font-family: Roboto;
+}
+
+.moveBox .name {
+  position: absolute;
+  left: 0.13%;
+  top: 0;
+  bottom: 86%;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.0em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+}
+
+.moveBox .outline {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 20%;
+  bottom: 0px;
+  border: 2px solid #425055;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* .moveBox .buttons {
+  position: absolute;
+  width: 100px;
+  left: 0px;
+  top: 80px;
+  bottom: 82px;
+  background: #D3362F;
+  border-radius: 10px 0px 0px 0px;
+} */
+
+/* .moveBox .image {
+  position: absolute;
+  width: 312px;
+  height: 208px;
+  left: 100px;
+  top: 80px;
+} */
+
+.moveBox .totalFramesText {
+  position: absolute;
+  left: 4%;
+  top: 26.5%;
+  bottom: 61.35%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  color: #90A4AE;
+}
+
+.moveBox .baseDmg {
+  position: absolute;
+  left: 18.5%;
+  right: 25.5%;
+  top: 26.5%;
+  bottom: 61.35%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  color: #90A4AE;
+  border-radius: 4px;
+}
+
+.moveBox .sosText {
+  position: absolute;
+  left: 69.46%;
+  right: 2.44%;
+  top: 26.5%;
+  bottom: 61.35%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  color: #90A4AE;
+  border-radius: 4px;
+}
+
+.moveBox .startupText {
+  position: absolute;
+  left: 4%;
+  top: 43%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+  color: #90A4AE;
+}
+
+.moveBox .activeText {
+  position: absolute;
+  left: 30%;
+  top: 43%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+  color: #90A4AE;
+}
+
+.moveBox .recoveryText {
+  position: absolute;
+  left: 60%;
+  top: 43%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+  color: #90A4AE;
+}
+
+.moveBox .notes {
+  position: absolute;
+  left: 4%;
+  top: 75%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+  color: #90A4AE;
+}
+
+.moveBox .noteContent {
+  position: absolute;
+  left: 15%;
+  top: 75%;
+  width: 35%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 95.62%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.065em;
+  color: #90A4AE;
+}
+
+.moveBox .shieldData {
+  position: absolute;
+  top: 75%;
+  left: 55%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+}
+
+.moveBox .shieldData .shieldlagTitle {
+  left: 55%;
+  color: #90A4AE;
+  display: inline;
+  margin-right: 5px;
+}
+
+.moveBox .shieldData .shieldlagText {
+  left: 69%;
+  color: #425055;
+  display: inline;
+  margin-right: 20px;
+}
+
+.moveBox .shieldData .shieldstunTitle {
+  left: 75%;
+  color: #90A4AE;
+  display: inline;
+  margin-right: 5px;
+}
+
+.moveBox .shieldData .shieldstunText {
+  left: 90%;
+  color: #425055;
+  display: inline;
+  margin-right: 5px;
+}
+
+/* Startup, Active, Recovery Bars */
+
+.bar {
+  position: absolute;
+  width: 0.7%;
+  height: 44px;
+  top: 0px;
+  bottom: 0px;
+  background: #FFED65;
+  border: 1px transparent;
+  border-radius: 4px;
+}
+
+.bar.active {
+  background: #00CC44;
+}
+
+.bar.recovery {
+  background: #E31919;
+}
+
+.frameContainer {
+  position: absolute;
+  left: 0%;
+  right: 2.13%;
+  top: 6.5%;
+  bottom: 20.6%;
+  margin-left: 0.5%;
+}
+
+.moveBox .timelineBackground {
+  position: absolute;
+  width: 90%;
+  height: 56px;
+  left: 4%;
+  top: 54.5%;
+  background: #425055;
+  border: 2px solid #B7C7CC;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 500px) {
+  .moveBox {
+    height: 250px;
+    width: 100%;
+  }
+  .moveBox .name {
+    font-size: 2.0em;
+  }
+  .moveBox .totalFramesText {
+    font-size: 1.2em;
+  }
+  .moveBox .baseDmg {
+    font-size: 1.2em;
+    left: 30%;
+  }
+  .moveBox .sosText {
+    font-size: 1.2em;
+    left: 60%;
+  }
+  .moveBox .startupText {
+    font-size: 0.8em;
+    left: 10%;
+    top: 38%;
+  }
+  .moveBox .activeText {
+    font-size: 0.8em;
+    left: 40%;
+    top: 38%;
+  }
+  .moveBox .recoveryText {
+    font-size: 0.8em;
+    left: 65%;
+    top: 38%;
+  }
+  .moveBox .timelineBackground {
+    top: 49%;
+  }
+  .moveBox .frameContainer {
+    left: 1px;
+  }
+  .bar {
+    width: 1.5%;
+    height: 44px;
+    top: 0px;
+    border: 0;
+    border-radius: 0;
+  }
+  .moveBox .notes {
+    display: none;
+  }
+  .moveBox .noteContent {
+    font-size: 0.8em;
+    top: 88%;
+    margin: 0 auto;
+    width: 100%;
+    left: auto;
+    display: block;
+  }
+  .moveBox .shieldData {
+    top: 74%;
+    margin: 0 auto;
+    width: 100%;
+    left: auto;
+  }
+  .moveBox .shieldData .shieldlagTitle {
+    font-size: 0.8em;
+    margin-right: 5px;
+  }
+  .moveBox .shieldData .shieldlagText {
+    font-size: 0.8em;
+    margin-right: 20px;
+  }
+  .moveBox .shieldData .shieldstunTitle {
+    font-size: 0.8em;
+    margin-right: 5px;
+  }
+  .moveBox .shieldData .shieldstunText {
+    font-size: 0.8em;
+  }
+}

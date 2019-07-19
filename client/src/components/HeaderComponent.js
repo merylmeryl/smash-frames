@@ -52,14 +52,10 @@ class Header extends Component {
             </Collapse> */}
           </div>
         </Navbar>
-        <Row>
-          <Col>
-            <Jumbotron className="centered">
-              <h1 className="display-3">Smash Frames</h1>
-              <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
-            </Jumbotron>
-          </Col>
-        </Row>
+        <Jumbotron className="centered">
+          <h1>Safe On Shield</h1>
+          <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
+        </Jumbotron>
       </React.Fragment>
     );
   }

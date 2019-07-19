@@ -14,7 +14,7 @@ const Moves = (props) => {
     <Row className="moves">
       <Col sm="12">
         {data.map((move, i) =>
-          <div style={{ marginBottom: '100px' }}><MoveBox
+          <div style={{ marginBottom: '8%' }}><MoveBox
             key={i}
             moveType={move.move_type}
             moveName={move.move_name}
