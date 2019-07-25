@@ -9,23 +9,24 @@ body .vsc-initialized {
 }
 
 .navbar {
-  height: 70px;
-  background: #D75FC9;
+  height: 35px;
+  background: #6CCFC4;
 }
 
 .navTriangle {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 70px solid #425055;
-  border-right: 405px solid transparent;
+  border-top: 35px solid #425055;
+  border-right: 202px solid transparent;
   left: 0;
 }
 
 .jumbotron {
   margin: 0px auto;
-  margin-top: 60px;
+  margin-top: 15px;
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .jumbotron>h1 {

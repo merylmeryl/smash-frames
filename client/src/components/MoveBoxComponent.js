@@ -27,7 +27,11 @@ function RenderBars({ numStartup, numActive, numRecovery }) {
     );
   }
 
-  i -= 1;
+  // "Hitbox Active" frames should overlap the last startup frame because that's when the
+  // move actually becomes active.
+
+  // Check for 0 case because some moves (like grabs) won't have any startup.
+  if (i != 0) i -= 1;
 
   for (i; i < numStartup + numActive; i++) {
     frameBar.push(
@@ -85,9 +89,9 @@ function MoveBox(props) {
       <div className="noteContent">{props.notes}</div>
       <div className="shieldData">
         <div className="shieldlagTitle">Shield Lag:</div>
-        <div className="shieldlagText">17</div>
+        <div className="shieldlagText">{props.shieldlag}</div>
         <div className="shieldstunTitle">Shield Stun:</div>
-        <div className="shieldstunText">17</div>
+        <div className="shieldstunText">{props.shieldstun}</div>
       </div>
     </div>
   );

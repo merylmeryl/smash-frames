@@ -3,6 +3,9 @@ import { Row, Col } from 'reactstrap';
 import MoveBox from './components/MoveBoxComponent';
 import { parseMultihit } from './utilities/parseMultihit.js';
 
+// TODO: Remove parseMultihit and simply allow any type of move to be passed in to the
+//       MoveBoxComponent.
+
 const Moves = (props) => {
   const { data } = props;
 
@@ -23,8 +26,10 @@ const Moves = (props) => {
             startup={move.startup_frames == null ? 0 : parseInt(parseMultihit(move.startup_frames))}
             active={move.hitbox_active == null ? 0 : parseInt(parseMultihit(move.hitbox_active))}
             recovery={
-              move.startup_frames == null || move.total_frames == null ? 0 : parseInt(parseMultihit(move.total_frames)) - parseInt(parseMultihit(move.startup_frames)) - 5}
+              move.startup_frames == null || move.total_frames == null || move.hitbox_active == null ? 0 : parseInt(parseMultihit(move.total_frames)) - (parseInt(parseMultihit(move.startup_frames)) - 1) - parseInt(parseMultihit(move.hitbox_active))}
             notes={move.notes}
+            shieldlag={move.shieldlag}
+            shieldstun={move.shieldstun}
           />
           </div>
         )}

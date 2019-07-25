@@ -58,7 +58,6 @@ class Header extends Component {
           <br />
           <p><a href="https://discord.gg/jVRzwqq" style={{ color: "#7289DA" }} target="_blank" rel="noopener noreferrer"><img src="https://smashframes-images.s3.us-east-2.amazonaws.com/Discord-Logo-Color.png" width="25" alt="discord" />Join our Discord</a> to receive updates, volunteer and chat with us!</p>
           <br />
-          <br />
           <h3>Release Dates</h3>
           <hr></hr>
           <Container className="text-centered text-sm-left">
