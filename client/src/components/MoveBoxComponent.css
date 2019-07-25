@@ -97,6 +97,7 @@
   text-transform: uppercase;
   color: #90A4AE;
   border-radius: 4px;
+  display: none;
 }
 
 .moveBox .startupText {

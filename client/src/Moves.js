@@ -21,7 +21,7 @@ const Moves = (props) => {
             totalFrames={move.total_frames}
             baseDamage={move.base_damage == null ? 0 : move.base_damage}
             startup={move.startup_frames == null ? 0 : parseInt(parseMultihit(move.startup_frames))}
-            active={5}
+            active={move.hitbox_active == null ? 0 : parseInt(parseMultihit(move.hitbox_active))}
             recovery={
               move.startup_frames == null || move.total_frames == null ? 0 : parseInt(parseMultihit(move.total_frames)) - parseInt(parseMultihit(move.startup_frames)) - 5}
             notes={move.notes}
