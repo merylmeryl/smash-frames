@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Navbar, Nav, NavbarToggler, Collapse, NavItem, Jumbotron, Row, Col, Container
+  Navbar, Jumbotron, Row, Col, Container
 } from 'reactstrap';
 
 class Header extends Component {
@@ -53,10 +53,10 @@ class Header extends Component {
           </div>
         </Navbar>
         <Jumbotron className="centered">
-          <img src="https://smashframes-images.s3.us-east-2.amazonaws.com/600px-Smash_Ball.png" width="50" /><h1>SAFE ON SHIELD</h1>
+          <img src="https://smashframes-images.s3.us-east-2.amazonaws.com/600px-Smash_Ball.png" alt="smash ball" width="50" /><h1>SAFE ON SHIELD</h1>
           <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
           <br />
-          <p><a href="https://discord.gg/jVRzwqq" style={{ color: "#7289DA" }} target="_blank"><img src="https://smashframes-images.s3.us-east-2.amazonaws.com/Discord-Logo-Color.png" width="25" />Join our Discord</a> to receive updates, volunteer and chat with us!</p>
+          <p><a href="https://discord.gg/jVRzwqq" style={{ color: "#7289DA" }} target="_blank" rel="noopener noreferrer"><img src="https://smashframes-images.s3.us-east-2.amazonaws.com/Discord-Logo-Color.png" width="25" alt="discord" />Join our Discord</a> to receive updates, volunteer and chat with us!</p>
           <br />
           <br />
           <h3>Release Dates</h3>

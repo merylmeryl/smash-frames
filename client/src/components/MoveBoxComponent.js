@@ -1,6 +1,16 @@
 import React from 'react';
 import './MoveBoxComponent.css';
 
+// TODO: Change this component so that it displays multihits more accurately.
+// 1. Check to make sure the number of "startups" is equal to the number of "hitbox_actives" -
+//    for example, startup:         2/5/8/11
+//                 hitbox_active:   1/1/1/1
+// 2. If not, or if there are other weird characters in there,
+//    then don't display the move and log it to the console with error output.
+// 3. If everything is okay, iterate through the startup frames and display them,
+//    then display their corresponding hitbox_active value.
+//    If there's only one hitbox frame, display it on top of the startup frame.
+
 var barWidth = 1;
 
 function RenderBars({ numStartup, numActive, numRecovery }) {
@@ -17,6 +27,8 @@ function RenderBars({ numStartup, numActive, numRecovery }) {
     );
   }
 
+  i -= 1;
+
   for (i; i < numStartup + numActive; i++) {
     frameBar.push(
       <div
@@ -28,7 +40,6 @@ function RenderBars({ numStartup, numActive, numRecovery }) {
       </div>
     );
   }
-  console.log(i);
 
   for (i; i < numStartup + numActive + numRecovery; i++) {
     frameBar.push(
@@ -40,7 +51,6 @@ function RenderBars({ numStartup, numActive, numRecovery }) {
       </div>
     );
   }
-  console.log(i);
 
   return (
     <div className="frameContainer">
