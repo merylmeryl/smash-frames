@@ -17,16 +17,14 @@ const Moves = (props) => {
     <Row className="moves">
       <Col sm="12">
         {data.map((move, i) =>
-          <div style={{ marginBottom: '8%' }}><MoveBox
-            key={i}
+          <div key={'mb' + i} style={{ marginBottom: '8%' }}><MoveBox
+            key={'mb' + i}
             moveType={move.move_type}
             moveName={move.move_name}
             totalFrames={move.total_frames}
             baseDamage={move.base_damage == null ? 0 : move.base_damage}
-            startup={move.startup_frames == null ? 0 : parseInt(parseMultihit(move.startup_frames))}
-            active={move.hitbox_active == null ? 0 : parseInt(parseMultihit(move.hitbox_active))}
-            recovery={
-              move.startup_frames == null || move.total_frames == null || move.hitbox_active == null ? 0 : parseInt(parseMultihit(move.total_frames)) - (parseInt(parseMultihit(move.startup_frames)) - 1) - parseInt(parseMultihit(move.hitbox_active))}
+            startup={move.startup_frames}
+            active={move.hitbox_active}
             notes={move.notes}
             shieldlag={move.shieldlag}
             shieldstun={move.shieldstun}
