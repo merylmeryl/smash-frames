@@ -11,6 +11,14 @@ router.get('/', (req, res) => {
   });
 });
 
+// router.get('/:moveId', (req, res) => {
+//   Moves.getMoveById(req.params.moveId, (err, moves) => {
+//     if (err)
+//       return res.json(err);
+//     return res.json(moves);
+//   });
+// });
+
 router.get('/fighter/:fighterId', (req, res) => {
   Moves.getMovesByFighter(req.params.fighterId, (err, moves) => {
     if (err)

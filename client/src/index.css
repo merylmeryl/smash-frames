@@ -8,6 +8,11 @@ body .vsc-initialized {
   background: #E5E5E5;
 }
 
+.fighterDropdowns {
+  margin-bottom: 4rem !important;
+  margin-top: 4rem !important;
+}
+
 .navbar {
   height: 35px;
   background: #6CCFC4;

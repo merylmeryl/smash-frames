@@ -1,11 +1,7 @@
 import React from 'react';
 import './MoveBoxComponent.css';
 
-var parseFirstHitNum = (frames) => {
-  return parseInt(frames.replace('...', '').split('/')[0].trim());
-}
-
-var parseLastHitNum = (frames) => {
+var parseLastHitInt = (frames) => {
   return parseInt(frames.replace('...', '').split('/')[0].trim());
 }
 
@@ -19,9 +15,8 @@ var isNumStartupEqualToNumActive = (startup, active) => {
 
 var computeRecovery = (startup, active, total) => {
   if (startup !== null && active !== null && total !== null) {
-    return parseLastHitNum(total) - (parseLastHitNum(startup) - 1 + parseLastHitNum(active));
+    return parseLastHitInt(total) - (parseLastHitInt(startup) - 1 + parseLastHitInt(active));
   }
-
 }
 
 // 3. If everything is okay, iterate through the startup frames and display them,
@@ -30,7 +25,7 @@ var computeRecovery = (startup, active, total) => {
 
 var barWidth = 1;
 
-function RenderBars({ startup, active, total, moveName }) {
+function RenderBars({ startup, active, total }) {
 
   // Shared variable for frame iteration (startup, active, recovery)
   var f = 0;
@@ -45,7 +40,6 @@ function RenderBars({ startup, active, total, moveName }) {
 
     return <div></div>
   }
-  console.log("move:", moveName, "startup: ", parseMultihit(startup), "active", parseMultihit(active));
   // Break up multihits into arrays
   var startupFrames = parseMultihit(startup);
   var activeFrames = parseMultihit(active);
@@ -101,8 +95,6 @@ function RenderBars({ startup, active, total, moveName }) {
     );
   }
 
-  console.log("move: ", moveName, "frameBar: ", frameBar);
-
   return (
     <div className="frameContainer">
       {frameBar}
@@ -112,33 +104,35 @@ function RenderBars({ startup, active, total, moveName }) {
 
 function MoveBox(props) {
 
+  console.log(props.data);
+
   return (
     <div className="moveBox">
       <div className="name">
-        {/* {props.moveType}: {props.moveName} */}
-        {props.moveName}
+        {/* {props.data.moveType}: {props.data.moveName} */}
+        {props.data.move_name}
       </div>
       <div className="outline"></div>
       {/* <div className="buttons"></div> */}
       {/* <div className="image"></div> */}
-      <div className="totalFramesText">FRAMES: {props.totalFrames}</div>
-      <div className="baseDmg">{props.baseDamage + '%'}</div>
+      <div className="totalFramesText">FRAMES: {props.data.total_frames}</div>
+      <div className="baseDmg">{props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div>
       <div className="sosText">SOS: NO</div>
-      <div className="startupText">Startup: {props.startup}</div>
-      <div className="activeText">Active: {props.active}</div>
-      <div className="recoveryText">Recovery: {computeRecovery(props.startup, props.active, props.totalFrames)}</div>
+      <div className="startupText">Startup: {props.data.startup_frames}</div>
+      <div className="activeText">Active: {props.data.hitbox_active}</div>
+      <div className="recoveryText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div>
       <div className="timelineBackground">
-        <RenderBars moveName={props.moveName} startup={props.startup} active={props.active} total={props.totalFrames} />
+        <RenderBars moveName={props.data.move_name} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
       </div>
       <div className="additionalStats"></div>
       <div className="divider"></div>
       <div className="notes">Notes: </div>
-      <div className="noteContent">{props.notes}</div>
+      <div className="noteContent">{props.data.notes}</div>
       <div className="shieldData">
         <div className="shieldlagTitle">Shield Lag:</div>
-        <div className="shieldlagText">{props.shieldlag}</div>
+        <div className="shieldlagText">{props.data.shieldlag}</div>
         <div className="shieldstunTitle">Shield Stun:</div>
-        <div className="shieldstunText">{props.shieldstun}</div>
+        <div className="shieldstunText">{props.data.shieldstun}</div>
       </div>
     </div>
   );
