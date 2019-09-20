@@ -5,17 +5,74 @@ body .vsc-initialized {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #E5E5E5;
+}
+
+.ml-1 {
+  margin-left: 0.5rem !important;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0px;
 }
 
 .fighterDropdowns {
-  margin-bottom: 4rem !important;
+  margin-bottom: rem !important;
   margin-top: 4rem !important;
+}
+
+.backArrow {
+  z-index: 1000;
+}
+
+.backHexagon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrowSvg {
+  position: absolute;
+  top: 6px;
+  left: 17px;
 }
 
 .navbar {
   height: 35px;
-  background: #6CCFC4;
+}
+
+.navbar.default {
+  background: black;
+}
+
+.navbar.bowser {
+  background: #ffc13d;
+}
+
+.navbar.bayonetta {
+  background: #214693;
+}
+
+.navbar.wolf {
+  background: #3F367C;
+}
+
+.navbar.mario {
+  background: #de4a4d;
+}
+
+.navbar.donkey-kong {
+  background: #7A3810;
+}
+
+.navbar.banjo-and-kazooie {
+  background: #fb4548;
+}
+
+.navbar.inkling {
+  background: #fd7636;
 }
 
 .navTriangle {
@@ -33,16 +90,55 @@ body .vsc-initialized {
   margin-bottom: 15px;
   width: 100%;
   padding-bottom: 1rem;
+  color: #425055;
+  background: radial-gradient(500px at 45.66% 54.73%, rgba(183, 199, 204, 0) 0%, rgba(183, 199, 204, 0.47) 100%);
+}
+
+.jumbotron.fighter {
+  background: linear-gradient(270deg, rgba(183, 199, 204, 0) 44.74%, rgba(183, 199, 204, 0.47) 100%);
+  font-family: "Roboto", "-apple-system", "Segoe UI", "Helvetica Neue", "Arial";
 }
 
 .jumbotron>h1 {
   font-size: 3.5em;
-  margin-top: 0.5em;
+  margin-top: 0.2em;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.05em;
 }
 
 .jumbotron>img {
   width: 25%;
   max-width: 155px;
+}
+
+.emblem {
+  position: relative;
+  top: -42px;
+}
+
+.emblem>img {
+  position: relative;
+  left: 0px;
+  width: 150px;
+  top: 0;
+}
+
+.emblem>h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  position: relative;
+  top: -84px;
+  left: 56px;
+}
+
+.jumbotron.fighter h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.05em;
 }
 
 .form-group {

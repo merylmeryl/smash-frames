@@ -1,6 +1,10 @@
 import React from 'react';
 import './MoveBoxComponent.css';
 
+const generateKey = (pre) => {
+  return `${pre}_${new Date().getMilliseconds()}_${Math.random()}`;
+}
+
 var parseLastHitInt = (frames) => {
   return parseInt(frames.replace('...', '').split('/')[0].trim());
 }
@@ -51,10 +55,10 @@ function RenderBars({ startup, active, total }) {
     var numStartup = parseInt(startupFrames[i]);
     var numActive = parseInt(activeFrames[i]);
 
-    // Draw the startup frames
+    // Draw startup frames
     for (f; f < numStartup; f++) {
       frameBar.push(
-        <div key={f + 's'}
+        <div key={generateKey(f)}
           className="bar startup"
           style={{
             left: f * barWidth + '%',
@@ -69,11 +73,11 @@ function RenderBars({ startup, active, total }) {
     // Check for 0 case because some moves (like grabs) won't have any startup.
     if (f !== 0) f -= 1;
 
-    // Draw the active frames
+    // Draw active frames
     for (f; f < numStartup + numActive - 1; f++) {
       frameBar.push(
         <div
-          key={f + 'a'}
+          key={'a' + f + generateKey(f)}
           className="bar active"
           style={{
             left: f * barWidth + '%',
@@ -83,10 +87,10 @@ function RenderBars({ startup, active, total }) {
     }
   }
 
-
+  // Draw recovery frames
   for (f; f < total; f++) {
     frameBar.push(
-      <div key={f + 'r'}
+      <div key={'r' + f + generateKey(f)}
         className="bar recovery"
         style={{
           left: f * barWidth + '%',
@@ -104,38 +108,41 @@ function RenderBars({ startup, active, total }) {
 
 function MoveBox(props) {
 
-  console.log(props.data);
-
-  return (
-    <div className="moveBox">
-      <div className="name">
-        {/* {props.data.moveType}: {props.data.moveName} */}
-        {props.data.move_name}
+  if (props.data !== null) {
+    return (
+      <div className="moveBox">
+        <div className="name">
+          {/* {props.data.moveType}: {props.data.moveName} */}
+          {props.data.move_name}
+        </div>
+        <div className="outline"></div>
+        {/* <div className="buttons"></div> */}
+        {/* <div className="image"></div> */}
+        <div className="totalFramesText">FRAMES: {props.data.total_frames}</div>
+        <div className="baseDmg">{props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div>
+        <div className="sosText">SOS: NO</div>
+        <div className="startupText">Startup: {props.data.startup_frames}</div>
+        <div className="activeText">Active: {props.data.hitbox_active}</div>
+        <div className="recoveryText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div>
+        <div className="timelineBackground">
+          <RenderBars key={props.data.move_id} moveName={props.data.move_name} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
+        </div>
+        <div className="additionalStats"></div>
+        <div className="divider"></div>
+        <div className="notes">Notes: </div>
+        <div className="noteContent">{props.data.notes}</div>
+        <div className="shieldData">
+          <div className="shieldlagTitle">Shield Lag:</div>
+          <div className="shieldlagText">{props.data.shieldlag}</div>
+          <div className="shieldstunTitle">Shield Stun:</div>
+          <div className="shieldstunText">{props.data.shieldstun}</div>
+        </div>
       </div>
-      <div className="outline"></div>
-      {/* <div className="buttons"></div> */}
-      {/* <div className="image"></div> */}
-      <div className="totalFramesText">FRAMES: {props.data.total_frames}</div>
-      <div className="baseDmg">{props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div>
-      <div className="sosText">SOS: NO</div>
-      <div className="startupText">Startup: {props.data.startup_frames}</div>
-      <div className="activeText">Active: {props.data.hitbox_active}</div>
-      <div className="recoveryText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div>
-      <div className="timelineBackground">
-        <RenderBars moveName={props.data.move_name} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
-      </div>
-      <div className="additionalStats"></div>
-      <div className="divider"></div>
-      <div className="notes">Notes: </div>
-      <div className="noteContent">{props.data.notes}</div>
-      <div className="shieldData">
-        <div className="shieldlagTitle">Shield Lag:</div>
-        <div className="shieldlagText">{props.data.shieldlag}</div>
-        <div className="shieldstunTitle">Shield Stun:</div>
-        <div className="shieldstunText">{props.data.shieldstun}</div>
-      </div>
-    </div>
-  );
+    );
+  }
+  else {
+    return <div></div>
+  }
 }
 
 export default MoveBox;    

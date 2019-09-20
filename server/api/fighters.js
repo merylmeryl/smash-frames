@@ -11,4 +11,12 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/:fighterName', (req, res) => {
+  Fighters.getFighterByName(req.params.fighterName, (err, fighter) => {
+    if (err)
+      return res.json(err);
+    return res.json(fighter);
+  });
+});
+
 module.exports = router;
