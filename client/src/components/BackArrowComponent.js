@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Link, Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { withRouter } from 'react-router';
 
 class BackArrow extends React.Component {
