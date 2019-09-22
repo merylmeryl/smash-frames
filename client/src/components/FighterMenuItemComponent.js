@@ -19,9 +19,9 @@ class FighterMenuItem extends React.Component {
     return (
       <div>
         <Link to={"/fighter/" + hyphenateFighterName(this.props.fighterName)}>
-          <Media>
+          <Media className="fighterMenuItem">
             <Media middle>
-              <Media style={imgStyle} object src={this.props.imageURL} alt={this.props.fighterName} />
+              <Media style={imgStyle} object src={this.props.imageURL_portrait} alt={this.props.fighterName} />
             </Media>
           </Media>
         </Link>

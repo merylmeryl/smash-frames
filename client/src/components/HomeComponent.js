@@ -26,6 +26,7 @@ function Home(props) {
           <Row><Col xs={12} sm={3} className="text-centered text-sm-left font-weight-bold">October 15th, 2019</Col><Col sm={1} className="d-none d-sm-block"> - </Col><Col>MVP Release.  Startup, Active, Recovery frames for all fighters.  May have some inaccuracies.  Will allow you to easily compare two moves between different fighters.</Col></Row>
         </Container>
       </Jumbotron>
+      <Container><Row><Col><span className="full-width-bar"></span></Col></Row></Container>
       <Container>
         <Row>
           {iconData.sort(function (a, b) {
@@ -35,7 +36,7 @@ function Home(props) {
               <FighterMenuItem
                 key={icon.name}
                 fighterName={hyphenateFighterName(icon.name)}
-                imageURL={icon.imageURL}
+                imageURL_portrait={icon.imageURL_portrait}
                 fighterCss={icon.name.toLowerCase()} />
             </Col>
           )}

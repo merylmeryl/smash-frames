@@ -39,6 +39,10 @@ body .vsc-initialized {
   left: 17px;
 }
 
+.fighterMenuItem {
+  margin-bottom: '0.25rem';
+}
+
 .navbar {
   height: 35px;
 }
@@ -47,16 +51,68 @@ body .vsc-initialized {
   background: black;
 }
 
-.navbar.bowser {
-  background: #ffc13d;
+.navbar.bayonetta {
+  background: #2E3383;
 }
 
-.navbar.bayonetta {
-  background: #214693;
+.navbar.samus {
+  background: #DF5050;
+}
+
+.navbar.pikachu {
+  background: #FADE45;
+}
+
+.navbar.luigi {
+  background: #59B23D;
+}
+
+.navbar.ness {
+  background: #F96B6D;
+}
+
+.navbar.captain-falcon {
+  background: #6E6C9D;
+}
+
+.navbar.jigglypuff {
+  background: #F5BDC5;
+}
+
+.navbar.peach {
+  background: #FA79A6;
+}
+
+.navbar.daisy {
+  background: #FECC62;
+}
+
+.navbar.bowser {
+  background: #F8AF37;
+}
+
+.navbar.ice-climbers {
+  background: #8C7BE0;
+}
+
+.navbar.yoshi {
+  background: #91DC82;
+}
+
+.navbar.dark-samus {
+  background: #4AE4F6;
+}
+
+.navbar.link {
+  background: #53C5E3;
 }
 
 .navbar.wolf {
   background: #3F367C;
+}
+
+.navbar.fox {
+  background: #FD823E;
 }
 
 .navbar.mario {
@@ -68,11 +124,255 @@ body .vsc-initialized {
 }
 
 .navbar.banjo-and-kazooie {
-  background: #fb4548;
+  background: #FC415A;
 }
 
 .navbar.inkling {
   background: #fd7636;
+}
+
+.navbar.kirby {
+  background: #F7566C;
+}
+
+.navbar.sheik {
+  background: #677AAB;
+}
+
+.navbar.zelda {
+  background: #F97DAB;
+}
+
+.navbar.dr-mario {
+  background: #190F23;
+}
+
+.navbar.charizard {
+  background: #E57147;
+}
+
+.navbar.bowser-jr {
+  background: #9BC44F;
+}
+
+.navbar.chrom {
+  background: #404B61;
+}
+
+.navbar.cloud {
+  background: #5CF3F8;
+}
+
+.navbar.corrin {
+  background: #D75FC9;
+}
+
+.navbar.dark-pit {
+  background: #8463F3;
+}
+
+.navbar.diddy-kong {
+  background: #EC4848;
+}
+
+.navbar.duck-hunt {
+  background: #584EA8;
+}
+
+.navbar.falco {
+  background: #4E63DE;
+}
+
+.navbar.ganondorf {
+  background: #841AE0;
+}
+
+.navbar.greninja {
+  background: #4FCEFF;
+}
+
+.navbar.hero {
+  background: #82A4E1;
+}
+
+.navbar.ike {
+  background: #423D65;
+}
+
+.navbar.incineroar {
+  background: #F8676B;
+}
+
+.navbar.isabelle {
+  background: #F8AA1D;
+}
+
+.navbar.ivysaur {
+  background: #85DAE7;
+}
+
+.navbar.joker {
+  background: #484E5F;
+}
+
+.navbar.joker-arsene {
+  background: #A03356;
+}
+
+.navbar.ken {
+  background: #D75B49;
+}
+
+.navbar.king-dedede {
+  background: #29ABFF;
+}
+
+.navbar.king-k-rool {
+  background: #A2C28A;
+}
+
+.navbar.little-mac {
+  background: #1F1F1E;
+}
+
+.navbar.lucas {
+  background: #F65F71;
+}
+
+.navbar.lucina {
+  background: #424467;
+}
+
+.navbar.lucario {
+  background: #4295C9;
+}
+
+.navbar.marth {
+  background: #456688;
+}
+
+.navbar.roy {
+  background: #DB4E4B;
+}
+
+.navbar.mega-man {
+  background: #8ACCF5;
+}
+
+.navbar.meta-knight {
+  background: #8A559B;
+}
+
+.navbar.mewtwo {
+  background: #7E4A6B;
+}
+
+.navbar.mii-brawler {
+  background: #D03630;
+}
+
+.navbar.mii-gunner {
+  background: #6C87D6;
+}
+
+.navbar.mii-swordfighter {
+  background: #5978CF;
+}
+
+.navbar.mr-game-and-watch {
+  background: #010000;
+}
+
+.navbar.olimar {
+  background: #FCEB6A;
+}
+
+.navbar.pac-man {
+  background: #EDD04F;
+}
+
+.navbar.palutena {
+  background: #6FEAFD;
+}
+
+.navbar.pichu {
+  background: #FFED65;
+}
+
+.navbar.piranha-plant {
+  background: #FF574F;
+}
+
+.navbar.pit {
+  background: #C3C8DB;
+}
+
+.navbar.richter {
+  background: #5576B8;
+}
+
+.navbar.ridley {
+  background: #8B4E72;
+}
+
+.navbar.rob {
+  background: #B9B6B5;
+}
+
+.navbar.robin {
+  background: #3A3643;
+}
+
+.navbar.rosalina-and-luma {
+  background: #6CCFC4;
+}
+
+.navbar.ryu {
+  background: #C84D4D;
+}
+
+.navbar.shulk {
+  background: #FF5A69;
+}
+
+.navbar.simon {
+  background: #723E57;
+}
+
+.navbar.snake {
+  background: #66717C;
+}
+
+.navbar.sonic {
+  background: #3144E1;
+}
+
+.navbar.squirtle {
+  background: #9BD6EF;
+}
+
+.navbar.toon-link {
+  background: #7EB455;
+}
+
+.navbar.villager {
+  background: #F75150;
+}
+
+.navbar.wario {
+  background: #F8CC64;
+}
+
+.navbar.wii-fit-trainer {
+  background: #68C2DA;
+}
+
+.navbar.young-link {
+  background: #64B359;
+}
+
+.navbar.zero-suit-samus {
+  background: #64BAD9;
 }
 
 .navTriangle {
@@ -87,7 +387,6 @@ body .vsc-initialized {
 .jumbotron {
   margin: 0px auto;
   margin-top: 15px;
-  margin-bottom: 15px;
   width: 100%;
   padding-bottom: 1rem;
   color: #425055;
@@ -97,6 +396,10 @@ body .vsc-initialized {
 .jumbotron.fighter {
   background: linear-gradient(270deg, rgba(183, 199, 204, 0) 44.74%, rgba(183, 199, 204, 0.47) 100%);
   font-family: "Roboto", "-apple-system", "Segoe UI", "Helvetica Neue", "Arial";
+}
+
+.jumbotron.fighter img {
+  max-width: 450px;
 }
 
 .jumbotron>h1 {
@@ -110,6 +413,15 @@ body .vsc-initialized {
 .jumbotron>img {
   width: 25%;
   max-width: 155px;
+}
+
+.full-width-bar {
+  margin: 0 -9999rem;
+  margin-bottom: 2.0rem;
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem;
+  padding-bottom: 0rem;
+  background: #58E3EC;
 }
 
 .emblem {

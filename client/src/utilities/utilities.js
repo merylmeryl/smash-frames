@@ -1,5 +1,10 @@
 export let parseFighterName = (name) => {
-  return name.split('-').join(' ');
+  if (name == 'Pac-Man') {
+    return 'Pac-Man';
+  }
+  else {
+    return name.split('-').join(' ');
+  }
 };
 
 export let hyphenateFighterName = (name) => {
