@@ -17,7 +17,8 @@ function Home(props) {
         <img src="https://smashframes-images.s3.us-east-2.amazonaws.com/600px-Smash_Ball.png" alt="smash ball" width="50" /><h1>SAFE ON SHIELD</h1>
         <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
         <br />
-        <p><a href="https://discord.gg/jVRzwqq" style={{ color: "#7289DA" }} target="_blank" rel="noopener noreferrer"><img src="https://smashframes-images.s3.us-east-2.amazonaws.com/Discord-Logo-Color.png" width="25" alt="discord" />Join our Discord</a> to receive updates, volunteer and chat with us!</p>
+        <p><a href="https://discord.gg/jVRzwqq" style={{ color: "#7289DA" }} target="_blank" rel="noopener noreferrer"><img src="https://smashframes-images.s3.us-east-2.amazonaws.com/Discord-Logo-Color.png" width="25" alt="discord" />&nbsp;Join our Discord</a> to receive updates, volunteer and chat with us!</p>
+        <p><a href="https://www.patreon.com/bePatron?u=24781171" style={{ color: "#FF5900" }} data-patreon-widget-type="become-patron-button"><img src="https://smashframes-images.s3.us-east-2.amazonaws.com/emblems/Patreon_logo+small.png" width="25" alt="patreon" />&nbsp;Become a Patron!</a>  With your support we can build it better and faster!<script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
         <br />
         <h3>Release Dates</h3>
 
