@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Home from './HomeComponent';
 import Fighter from './FighterComponent';
-import { iconData } from '../utilities/iconData';
+import Members from './MembersComponent';
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Main extends React.Component {
@@ -13,6 +15,7 @@ class Main extends React.Component {
         <Router>
           <Route exact path="/" component={Home} />
           <Route path="/fighter/:fighterName" component={Fighter} />
+          <Route exact path="/members" component={Members} />
         </Router>
       </div>
     );

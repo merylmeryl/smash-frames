@@ -19,7 +19,7 @@ class FighterCard extends React.Component {
           <Container fluid={false}>
             <Row>
               <Col xs={12} sm={6}>
-                <img width="100%" max-width="450px" src={this.props.assets.imageURL_large} alt={this.props.assets.name} />
+                <img width="100%" src={this.props.assets.imageURL_large} alt={this.props.assets.name} />
               </Col>
               <Col xs={12} sm={6}>
                 <Row className="mt-l">
