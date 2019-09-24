@@ -17,7 +17,7 @@ class Members extends React.Component {
           <Container><Row><Col>
             <br /><br />
             <p>Thanks to everyone who helped make this site.</p>
-            <p><b>Pakoraptor (Meryl Mabin):</b> Developer</p>
+            <p><b>Pakoraptor (Meryl Dara):</b> Full-Stack Developer</p>
             <p><b>Un Diablo:</b> Designer</p>
             <p><b>Plague von Karma (May Evans):</b> Hitbox and frame data</p>
             <p><b>EyeDonutz:</b> Hitbox and frame data</p>

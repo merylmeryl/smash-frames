@@ -16,6 +16,13 @@ function Home(props) {
       <Jumbotron className="centered">
         <img src="https://smashframes-images.s3.us-east-2.amazonaws.com/600px-Smash_Ball.png" alt="smash ball" width="50" /><h1>SAFE ON SHIELD</h1>
         <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
+        The goal is to make a tool that will help you elevate your Smash gameplay to the next level.
+        <br />
+        Using this site will help you answer questions like, "Is it safe for Marth to F-Smash after he spot-dodges Mario's F-Smash?"
+        <br />
+        and, "<i>Exactly</i> how long will I be vulnerable after I use Wolf Flash?"
+        <br />
+        <br />
         This site is still in development, so there will be data errors and weirdness for a while.
         <br />But if you love the idea of making an awesome tool for the Smash community, we could use your help in speeding things up!
         <br />
