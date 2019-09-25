@@ -122,7 +122,7 @@ function MoveBox(props) {
         <div className="baseDmg">{props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div>
         <div className="sosText">SOS: NO</div>
         <div className="startupText">Startup: {props.data.startup_frames}</div>
-        <div className="activeText">Active: {props.data.hitbox_active}</div>
+        <div className="activeText">Active: {props.data.hitbox_frames === null ? props.data.hitbox_active : props.data.hitbox_frames}</div>
         <div className="recoveryText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</div>
         <div className="timelineBackground">
           <RenderBars key={props.data.move_id} moveName={props.data.move_name} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
