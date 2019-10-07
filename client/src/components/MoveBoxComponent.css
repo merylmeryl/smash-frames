@@ -1,18 +1,11 @@
 /* Big "box" that holds all the frame data (includes the title above the box) */
 
 .moveBox {
-  position: relative;
   width: 90%;
-  height: 320px;
-  margin: auto;
-  font-family: Roboto;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 .moveBox .name {
-  position: absolute;
-  left: 0.13%;
-  top: 0;
-  bottom: 86%;
   font-style: normal;
   font-weight: 900;
   font-size: 3.0em;
@@ -21,12 +14,7 @@
   text-transform: capitalize;
 }
 
-.moveBox .outline {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 20%;
-  bottom: 0px;
+.moveBox .borderedMoveData {
   border: 2px solid #425055;
   box-sizing: border-box;
   border-radius: 10px;
@@ -51,11 +39,6 @@
 } */
 
 .moveBox .totalFramesText {
-  position: absolute;
-  left: 4%;
-  top: 26.5%;
-  bottom: 61.35%;
-  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 2.5em;
@@ -65,12 +48,16 @@
   color: #90A4AE;
 }
 
+.moveBox .statsTitleSecondary {
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 95.62%;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  color: #90A4AE;
+}
+
 .moveBox .baseDmg {
-  position: absolute;
-  left: 18.5%;
-  right: 25.5%;
-  top: 26.5%;
-  bottom: 61.35%;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -83,11 +70,6 @@
 }
 
 .moveBox .sosText {
-  position: absolute;
-  left: 69.46%;
-  right: 2.44%;
-  top: 26.5%;
-  bottom: 61.35%;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -101,9 +83,6 @@
 }
 
 .moveBox .startupText {
-  position: absolute;
-  left: 4%;
-  top: 43%;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -115,9 +94,6 @@
 }
 
 .moveBox .activeText {
-  position: absolute;
-  left: 30%;
-  top: 43%;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -129,9 +105,6 @@
 }
 
 .moveBox .recoveryText {
-  position: absolute;
-  left: 60%;
-  top: 43%;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -143,9 +116,6 @@
 }
 
 .moveBox .notes {
-  position: absolute;
-  left: 4%;
-  top: 75%;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -157,10 +127,6 @@
 }
 
 .moveBox .noteContent {
-  position: absolute;
-  left: 15%;
-  top: 75%;
-  width: 35%;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -172,45 +138,24 @@
   color: #90A4AE;
 }
 
-.moveBox .shieldData {
-  position: absolute;
-  top: 75%;
-  left: 55%;
+.moveBox .moreStats {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: capitalize;
 }
 
-.moveBox .shieldData .shieldlagTitle {
-  left: 55%;
+.moveBox .statsTitle {
   color: #90A4AE;
   display: inline;
-  margin-right: 5px;
 }
 
-.moveBox .shieldData .shieldlagText {
-  left: 69%;
+.moveBox .statsText {
   color: #425055;
   display: inline;
-  margin-right: 20px;
-}
-
-.moveBox .shieldData .shieldstunTitle {
-  left: 75%;
-  color: #90A4AE;
-  display: inline;
-  margin-right: 5px;
-}
-
-.moveBox .shieldData .shieldstunText {
-  left: 90%;
-  color: #425055;
-  display: inline;
-  margin-right: 5px;
 }
 
 /* Startup, Active, Recovery Bars */
@@ -218,7 +163,7 @@
 .bar {
   position: absolute;
   width: 0.7%;
-  height: 44px;
+  height: 30px;
   top: 0px;
   bottom: 0px;
   background: #FFED65;
@@ -235,6 +180,7 @@
 }
 
 .frameContainer {
+  height: 38px;
   position: absolute;
   left: 0%;
   right: 2.13%;
@@ -243,12 +189,15 @@
   margin-left: 0.5%;
 }
 
+.moveBox .timelineCol {
+  height: 50px;
+}
+
 .moveBox .timelineBackground {
   position: absolute;
   width: 90%;
-  height: 56px;
+  height: 38px;
   left: 4%;
-  top: 54.5%;
   background: #425055;
   border: 2px solid #B7C7CC;
   box-sizing: border-box;
@@ -257,47 +206,34 @@
 
 @media screen and (max-width: 500px) {
   .moveBox {
-    height: 250px;
     width: 100%;
   }
   .moveBox .name {
     font-size: 2.0em;
   }
   .moveBox .totalFramesText {
-    font-size: 1.2em;
+    font-size: 1.6em;
+  }
+  .movebox .statsTitleSecondary {
+    font-size: 1.4em;
   }
   .moveBox .baseDmg {
-    font-size: 1.2em;
-    left: 30%;
-  }
-  .moveBox .sosText {
-    font-size: 1.2em;
-    left: 60%;
+    font-size: 1.6em;
   }
   .moveBox .startupText {
-    font-size: 0.8em;
-    left: 10%;
-    top: 38%;
+    font-size: 1.2em;
   }
   .moveBox .activeText {
-    font-size: 0.8em;
-    left: 40%;
-    top: 38%;
+    font-size: 1.2em;
   }
   .moveBox .recoveryText {
-    font-size: 0.8em;
-    left: 65%;
-    top: 38%;
-  }
-  .moveBox .timelineBackground {
-    top: 49%;
+    font-size: 1.2em;
   }
   .moveBox .frameContainer {
     left: 1px;
   }
   .bar {
     width: 1.5%;
-    height: 44px;
     top: 0px;
     border: 0;
     border-radius: 0;
@@ -305,33 +241,7 @@
   .moveBox .notes {
     display: none;
   }
-  .moveBox .noteContent {
-    font-size: 0.8em;
-    top: 88%;
-    margin: 0 auto;
-    width: 100%;
-    left: auto;
-    display: block;
-  }
-  .moveBox .shieldData {
-    top: 74%;
-    margin: 0 auto;
-    width: 100%;
-    left: auto;
-  }
-  .moveBox .shieldData .shieldlagTitle {
-    font-size: 0.8em;
-    margin-right: 5px;
-  }
-  .moveBox .shieldData .shieldlagText {
-    font-size: 0.8em;
-    margin-right: 20px;
-  }
-  .moveBox .shieldData .shieldstunTitle {
-    font-size: 0.8em;
-    margin-right: 5px;
-  }
-  .moveBox .shieldData .shieldstunText {
-    font-size: 0.8em;
+  .moveBox .moreStats {
+    font-size: 1.0em;
   }
 }

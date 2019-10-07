@@ -1,5 +1,8 @@
 import React from 'react';
 import './MoveBoxComponent.css';
+import {
+  Navbar, Jumbotron, Row, Col, Container, Media
+} from 'reactstrap';
 
 const generateKey = (pre) => {
   return `${pre}_${new Date().getMilliseconds()}_${Math.random()}`;
@@ -15,6 +18,13 @@ var parseMultihit = (frames) => {
 
 var isNumStartupEqualToNumActive = (startup, active) => {
   return startup.split('/').length === active.split('/').length;
+}
+
+var spacesToNewlines = (str) => {
+  if (str !== null) {
+    return str.replace(' ', '\n');
+  }
+  return null;
 }
 
 var computeRecovery = (startup, active, total) => {
@@ -110,34 +120,77 @@ function MoveBox(props) {
 
   if (props.data !== null) {
     return (
-      <div className="moveBox">
-        <div className="name">
-          {/* {props.data.moveType}: {props.data.moveName} */}
-          {props.data.move_name}
-        </div>
-        <div className="outline"></div>
-        {/* <div className="buttons"></div> */}
-        {/* <div className="image"></div> */}
-        <div className="totalFramesText">FRAMES: {props.data.total_frames}</div>
-        <div className="baseDmg">{props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div>
-        <div className="sosText">SOS: NO</div>
-        {/* <div className="startupText">Startup: {props.data.startup_frames}</div> */}
-        <div className="activeText">Active: {props.data.hitbox_frames === null ? props.data.hitbox_active : props.data.hitbox_frames}</div>
-        <div className="recoveryText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</div>
-        <div className="timelineBackground">
-          <RenderBars key={props.data.move_id} moveName={props.data.move_name} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
-        </div>
-        <div className="additionalStats"></div>
-        <div className="divider"></div>
-        <div className="notes">Notes: </div>
-        <div className="noteContent">{props.data.notes}</div>
-        <div className="shieldData">
-          <div className="shieldlagTitle">Shield Lag:</div>
-          <div className="shieldlagText">{props.data.shieldlag}</div>
-          <div className="shieldstunTitle">Shield Stun:</div>
-          <div className="shieldstunText">{props.data.shieldstun}</div>
-        </div>
-      </div>
+      <div>
+        <Container className="moveBox mb-5">
+          <Row className="mb-3">
+            <Col className="text-left">
+              <div className="name">
+                {props.data.move_name}
+              </div>
+            </Col>
+          </Row>
+          {/* <div className="buttons"></div> */}
+          {/* <div className="image"></div> */}
+          <Row>
+            <Col xs={12} lg={4} className="mb-1">
+              <img className="img-fluid" src={props.data.hitbox_img === null ? '' : props.data.hitbox_img} />
+            </Col>
+            <Col xs={12} lg={8}>
+              <Container className="borderedMoveData">
+                <Row className="text-left mt-3 mb-3">
+                  <Col xs={6} sm={6} className="totalFramesText">FRAMES: {props.data.total_frames}</Col>
+                  <Col><div className="baseDmg">Dmg: {props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div></Col>
+                </Row>
+                <Row className="text-left mb-3 pl-3">
+                  <Col><div className="startupText">Startup: {props.data.startup_frames}</div></Col>
+                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? props.data.hitbox_active : props.data.hitbox_frames}</div></Col>
+                  <Col><div className="recoveryText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</div></Col>
+                </Row>
+                <Row>
+                  <Col className="timelineCol">
+                    <div className="timelineBackground">
+                      <RenderBars key={props.data.move_id} moveName={props.data.move_name} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="moreStats mb-3">
+                  <Col>
+                    <Container className="text-left pl-0">
+                      <Row className="mb-2">
+                        <Col xs={3} sm={3}><div className="statsTitle">Hitlag:</div></Col>
+                        <Col xs={4} sm={2} className="text-left"><div className="statsText">{props.data.hitlag}</div></Col>
+                      </Row>
+                      <Row className="mb-4 text-left">
+                        <Col xs={4} sm={3} className="pr-0"><div className="statsTitle">Base KB:</div></Col>
+                        <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.bkb_fkb)}</div></Col>
+                        <Col xs={4} sm={3} className="pr-0"><div className="statsTitle">KB Growth:</div></Col>
+                        <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.kbg)}</div></Col>
+                      </Row>
+                      <Row className="mb-2">
+                        <Col className="statsTitleSecondary">Shield</Col>
+                      </Row>
+                      <Row className="mb-3 pl-3">
+                        <Col xs={3}><div className="statsTitle">Lag:</div></Col>
+                        <Col xs={9}><div className="statsText">{props.data.shieldlag}</div></Col>
+                        <Col xs={3}><div className="statsTitle">Stun:</div></Col>
+                        <Col xs={9}><div className="statsText">{props.data.shieldstun}</div></Col>
+                        <Col xs={3}><div className="statsTitle">Damage:</div></Col>
+                        <Col xs={9}><div className="statsText">{props.data.shield_dmg}</div></Col>
+                      </Row>
+                      <Row className="text-left mb-2">
+                        <Col xs={3}><div className="statsTitleSecondary">Notes: </div></Col>
+                      </Row>
+                      <Row className="text-left pl-3">
+                        <Col><div className="statsText">{props.data.notes}</div></Col>
+                      </Row>
+                    </Container>
+                  </Col>
+                </Row>
+              </Container>
+            </Col>
+          </Row>
+        </Container>
+      </div >
     );
   }
   else {

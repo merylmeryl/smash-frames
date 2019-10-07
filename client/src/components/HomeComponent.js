@@ -42,8 +42,7 @@ function Home(props) {
           <Row><Col xs={12} sm={3} className="text-centered text-sm-left font-weight-bold">October 15th, 2019</Col><Col sm={1} className="d-none d-sm-block"> - </Col><Col>MVP Release.  Startup, Hitbox Active, Recovery frames for all fighters.  May have some inaccuracies.  Will allow you to easily compare two moves between different fighters.</Col></Row>
         </Container>
       </Jumbotron>
-      <Container><Row><Col><span className="full-width-bar"></span></Col></Row></Container>
-      <Container>
+      <Container className="mt-4">
         <Row>
           {iconData.sort(function (a, b) {
             return a.name.localeCompare(b.name);

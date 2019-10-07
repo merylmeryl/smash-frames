@@ -24,7 +24,7 @@ export const iconData = [
     name: 'Mario',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_mario.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_mario.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -52,7 +52,7 @@ export const iconData = [
     name: 'Yoshi',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_yoshi.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_yoshi.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -66,7 +66,7 @@ export const iconData = [
     name: 'Luigi',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_luigi.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_luigi.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -94,21 +94,21 @@ export const iconData = [
     name: 'Peach',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_peach.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_peach.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
     name: 'Daisy',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_daisy.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_daisy.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
     name: 'Bowser',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_bowser.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_bowser.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -149,7 +149,7 @@ export const iconData = [
     name: 'Dr Mario',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_dr_mario.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_dr_mario.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -254,7 +254,7 @@ export const iconData = [
     name: 'Wario',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_wario.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_wario.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -380,7 +380,7 @@ export const iconData = [
     name: 'Rosalina and Luma',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_rosalina_and_luma.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_rosalina_and_luma.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -443,7 +443,7 @@ export const iconData = [
     name: 'Bowser Jr',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_bowser_jr.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_bowser_jr.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
@@ -541,7 +541,7 @@ export const iconData = [
     name: 'Piranha Plant',
     imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_piranha_plant.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_piranha_plant.png',
-    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MarioSymbol.png'
+    imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/SuperMarioSymbol.png'
   },
 
   {
