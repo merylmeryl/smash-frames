@@ -28,7 +28,8 @@ var spacesToNewlines = (str) => {
 }
 
 var computeRecovery = (startup, active, total) => {
-  if (startup !== null && active !== null && total !== null) {
+  if (startup !== null && active !== null && total !== null
+    && startup !== undefined && active !== undefined && total !== undefined) {
     return parseLastHitInt(total) - (parseLastHitInt(startup) - 1 + parseLastHitInt(active));
   }
 }
@@ -129,8 +130,6 @@ function MoveBox(props) {
               </div>
             </Col>
           </Row>
-          {/* <div className="buttons"></div> */}
-          {/* <div className="image"></div> */}
           <Row>
             <Col xs={12} lg={4} className="mb-1">
               <img className="img-fluid" src={props.data.hitbox_img === null ? '' : props.data.hitbox_img} />
@@ -142,8 +141,8 @@ function MoveBox(props) {
                   <Col><div className="baseDmg">Dmg: {props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div></Col>
                 </Row>
                 <Row className="text-left mb-3 pl-3">
-                  <Col><div className="startupText">Startup: {props.data.startup_frames}</div></Col>
-                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? props.data.hitbox_active : props.data.hitbox_frames}</div></Col>
+                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? props.data.startup_frames : props.data.hitbox_frames}</div></Col>
+                  <Col><div className="startupText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div></Col>
                   <Col><div className="recoveryText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</div></Col>
                 </Row>
                 <Row>
@@ -176,6 +175,8 @@ function MoveBox(props) {
                         <Col xs={9}><div className="statsText">{props.data.shieldstun}</div></Col>
                         <Col xs={3}><div className="statsTitle">Damage:</div></Col>
                         <Col xs={9}><div className="statsText">{props.data.shield_dmg}</div></Col>
+                        <Col xs={3}><div className="statsTitle">Advantage:</div></Col>
+                        <Col xs={9}><div className="statsText">{props.data.advantage}</div></Col>
                       </Row>
                       <Row className="text-left mb-2">
                         <Col xs={3}><div className="statsTitleSecondary">Notes: </div></Col>
