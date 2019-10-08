@@ -21,6 +21,8 @@ class Members extends React.Component {
             <p><b>Un Diablo (Rafael Tudela):</b> Designer</p>
             <p><b>Plague von Karma (May Evans):</b> Hitbox and frame data</p>
             <p><b>EyeDonutz:</b> Hitbox and frame data</p>
+            <p><b>Isabella J:</b> Hitbox visualizations</p>
+            <p><b>Struggleton:</b> Hitbox visualizations</p>
           </Col></Row></Container>
         </Jumbotron>
       </div>

@@ -164,6 +164,8 @@ function MoveBox(props) {
                         <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.bkb_fkb)}</div></Col>
                         <Col xs={4} sm={3} className="pr-0"><div className="statsTitle">KB Growth:</div></Col>
                         <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.kbg)}</div></Col>
+                        <Col xs={4} sm={3} className="pr-0"><div className="statsTitle">Angle:</div></Col>
+                        <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.angle)}</div></Col>
                       </Row>
                       <Row className="mb-2">
                         <Col className="statsTitleSecondary">Shield</Col>
