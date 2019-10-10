@@ -429,14 +429,14 @@ body .vsc-initialized {
   top: -42px;
 }
 
-.emblem>img {
+.emblem img {
   position: relative;
   left: 0px;
   width: 150px;
   top: 0;
 }
 
-.emblem>h1 {
+.emblem h1 {
   font-size: 4.5rem;
   text-transform: uppercase;
   font-weight: 800;
@@ -478,7 +478,16 @@ body .vsc-initialized {
 }
 
 @media screen and (max-width: 500px) {
-  .jumbotron>h1 {
-    font-size: 2.5em;
+  .jumbotron h1 {
+    font-size: 2.3em;
+  }
+  .emblem h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    position: relative;
+    top: -10px;
+    left: 0%;
   }
 }

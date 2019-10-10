@@ -18,7 +18,6 @@ function Home(props) {
         <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
         Frame data shouldn't be confusing.  Our goal is to take all frame data and display it in clear and attractive infographics.
         <br />
-        Using this site will help you answer questions like, "Is it safe for Marth to F-Smash after he spot-dodges Mario's F-Smash?"
         <br />
         This site is still in development, so there will be data errors and weirdness for a while.
         <br />
