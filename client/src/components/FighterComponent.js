@@ -182,6 +182,10 @@ class Fighter extends React.Component {
               </Col>
             </Row> */}
           </Container>
+          <br />
+          <br />
+          <br />
+          <br />
           <AdComponent />
         </div>
       );
