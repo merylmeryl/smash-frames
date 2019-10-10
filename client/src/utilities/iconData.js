@@ -141,7 +141,7 @@ export const iconData = [
 
   {
     name: 'Banjo and Kazooie',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_banjo_and_kazooie.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_banjo_trans.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_banjo_and_kazooie.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/BanjoKazooieSymbol.png'
   },
@@ -273,21 +273,21 @@ export const iconData = [
 
   {
     name: 'Squirtle',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_squirtle.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_squirtle_trans.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_squirtle.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/PokemonSymbol.png'
   },
 
   {
     name: 'Ivysaur',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_ivysaur.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_ivysaur_trans.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_ivysaur.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/PokemonSymbol.png'
   },
 
   {
     name: 'Charizard',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_charizard.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_charizard_trans.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_charizard.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/PokemonSymbol.png'
   },
@@ -406,7 +406,7 @@ export const iconData = [
 
   {
     name: 'Mii Gunner',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_mii_gunner_sans.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_sans_trans.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_mii_gunner_sans.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MiiSymbol.png'
   },
@@ -553,14 +553,14 @@ export const iconData = [
 
   {
     name: 'Joker Arsene',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_joker_arsene.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_arsene_trans.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_joker_arsene.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/PersonaSymbol.png'
   },
 
   {
     name: 'Hero',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_hero.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_hero_trans.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_hero.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/DragonQuestSymbol.png'
   },

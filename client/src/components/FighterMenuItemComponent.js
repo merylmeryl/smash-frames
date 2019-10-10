@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { hyphenateFighterName } from '../utilities/utilities';
+import { hyphenateFighterName, parseFighterName } from '../utilities/utilities';
+import './FighterMenuItemComponent.css';
 
 import {
   Media
@@ -17,13 +18,12 @@ class FighterMenuItem extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="mb-1">
         <Link to={"/fighter/" + hyphenateFighterName(this.props.fighterName)}>
-          <Media className="fighterMenuItem">
-            <Media middle>
-              <Media style={imgStyle} object src={this.props.imageURL_portrait} alt={this.props.fighterName} />
-            </Media>
-          </Media>
+          <div className="fighterMenuItem rounded">
+            <span className="fighterMenuItemTitle"><p>{parseFighterName(this.props.fighterName)}</p></span>
+            <Media style={imgStyle} object src={this.props.imageURL_portrait} alt={this.props.fighterName} />
+          </div>
         </Link>
       </div>
     );

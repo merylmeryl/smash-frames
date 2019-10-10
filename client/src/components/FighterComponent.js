@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Header from './HeaderComponent';
 import FighterCard from './FighterCardComponent';
 import MoveBox from './MoveBoxComponent';
+import AdComponent from './AdComponent';
 
 import { iconData } from '../utilities/iconData';
 import { parseFighterName } from '../utilities/utilities';
@@ -181,6 +182,7 @@ class Fighter extends React.Component {
               </Col>
             </Row> */}
           </Container>
+          <AdComponent />
         </div>
       );
     }
