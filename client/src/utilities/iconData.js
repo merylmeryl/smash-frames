@@ -154,7 +154,7 @@ export const iconData = [
 
   {
     name: 'Pichu',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_pichu.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_pichu_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_pichu.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/PokemonSymbol.png'
   },
@@ -217,7 +217,7 @@ export const iconData = [
 
   {
     name: 'Mr Game and Watch',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_mr_game_and_watch.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_mr_game_and_watch_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_mr_game_and_watch.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/Game%26WatchSymbol.png'
   },
@@ -238,7 +238,7 @@ export const iconData = [
 
   {
     name: 'Dark Pit',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_dark_pit.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_dark_pit_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_dark_pit.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/KidIcarusSymbol.png'
   },
@@ -336,7 +336,7 @@ export const iconData = [
 
   {
     name: 'ROB',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_rob.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_rob_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_rob.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/ROBSymbol.png'
   },
@@ -350,7 +350,7 @@ export const iconData = [
 
   {
     name: 'Villager',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_villager.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_villager_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_villager.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/AnimalCrossingSymbol.png'
   },
@@ -483,7 +483,7 @@ export const iconData = [
 
   {
     name: 'Bayonetta',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_bayonetta.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_bayonetta_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_bayonetta.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/BayonettaSymbol.png'
   },
@@ -546,7 +546,7 @@ export const iconData = [
 
   {
     name: 'Joker',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_joker.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_joker_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_joker.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/PersonaSymbol.png'
   },
