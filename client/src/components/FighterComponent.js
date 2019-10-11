@@ -181,16 +181,13 @@ class Fighter extends React.Component {
                 <MoveBox data={this.state.selectedRivalMove} />
               </Col>
             </Row> */}
+            <Row>
+              <Col>
+                <br /><br />
+                <AdComponent />
+              </Col>
+            </Row>
           </Container>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <AdComponent />
         </div>
       );
     }
