@@ -141,7 +141,7 @@ function MoveBox(props) {
                   <Col><div className="baseDmg">Dmg: {props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div></Col>
                 </Row>
                 <Row className="text-left mb-3 pl-3">
-                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</div></Col>
+                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active + ' frames') : props.data.hitbox_frames}</div></Col>
                   <Col><div className="startupText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div></Col>
                 </Row>
                 <Row>
