@@ -259,7 +259,7 @@ export const iconData = [
 
   {
     name: 'Snake',
-    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_snake.png',
+    imageURL_portrait: 'https://d2io28u36gemnx.cloudfront.net/portraits/portrait_snake_compressed.png',
     imageURL_large: 'https://d2io28u36gemnx.cloudfront.net/large_character_images/large_snake.png',
     imageURL_emblem: 'https://d2io28u36gemnx.cloudfront.net/emblems/MetalGearSymbol.png'
   },
