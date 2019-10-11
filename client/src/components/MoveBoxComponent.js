@@ -137,13 +137,12 @@ function MoveBox(props) {
             <Col xs={12} lg={8}>
               <Container className="borderedMoveData">
                 <Row className="text-left mt-3 mb-3">
-                  <Col xs={6} sm={6} className="totalFramesText">FRAMES: {props.data.total_frames}</Col>
+                  <Col xs={6} sm={6} className="totalFramesText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</Col>
                   <Col><div className="baseDmg">Dmg: {props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div></Col>
                 </Row>
                 <Row className="text-left mb-3 pl-3">
-                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? props.data.startup_frames : props.data.hitbox_frames}</div></Col>
+                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</div></Col>
                   <Col><div className="startupText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div></Col>
-                  <Col><div className="recoveryText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</div></Col>
                 </Row>
                 <Row>
                   <Col className="timelineCol">
