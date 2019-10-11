@@ -132,7 +132,7 @@ class Fighter extends React.Component {
           <Header fighterCss={this.props.match.params.fighterName.toLowerCase()} />
           <FighterCard assets={fighterAssets} />
           <Container fluid className="centered sticky">
-            <Row className="moves">
+            {/* <Row className="moves">
               <Col xs={1}>
                 <h3>VS</h3>
               </Col>
@@ -144,7 +144,7 @@ class Fighter extends React.Component {
                   </Input>
                 </FormGroup>
               </Col>
-            </Row>
+            </Row> */}
             <Row>
               <Col>
                 <br />
