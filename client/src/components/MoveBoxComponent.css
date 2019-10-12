@@ -228,4 +228,7 @@
   .moveBox .moreStats {
     font-size: 1.0em;
   }
+  .moveBox .bottomStats {
+    margin-left: 0px !important;
+  }
 }

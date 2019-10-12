@@ -32,6 +32,7 @@ var computeRecovery = (startup, active, total) => {
 //    If there's only one hitbox frame, display it on top of the startup frame.
 
 var barWidth = 1;
+var noHitMoveTypes = ['N-Air Dodge', 'D-Air Dodge', 'DD-Air Dodge', 'S-Air Dodge', 'DU-Air Dodge', 'Du-Air Dodge', 'U-Air Dodge'];
 
 function RenderBars({ startup, active, total }) {
 
@@ -110,6 +111,70 @@ function RenderBars({ startup, active, total }) {
   )
 }
 
+function RenderShieldData({ lag, stun, dmg, advantage }) {
+  if (lag === null && stun === null && dmg === null && advantage === null) {
+    return <div></div>;
+  }
+  else {
+    return <div>
+      <Row className="mb-2">
+        <Col className="statsTitleSecondary">Shield</Col>
+      </Row>
+      <Row className="mb-3 pl-2">
+        <Col xs={4}><div className="statsTitle mb-1 pr-0">Lag:</div></Col>
+        <Col xs={8} className="mb-1"><div className="statsText">{lag}</div></Col>
+        <Col xs={4}><div className="statsTitle mb-1 pr-0">Stun:</div></Col>
+        <Col xs={8} className="mb-1"><div className="statsText">{stun}</div></Col>
+        <Col xs={4}><div className="statsTitle mb-1 pr-0">Damage:</div></Col>
+        <Col xs={8} className="mb-1"><div className="statsText">{dmg}</div></Col>
+        <Col xs={4}><div className="statsTitle mb-1 pr-0">Advantage:</div></Col>
+        <Col xs={8}><div className="statsText">{advantage}</div></Col>
+      </Row>
+    </div>
+  }
+}
+
+function RenderHitData({ hitlag, bkb_fkb, kbg, angle }) {
+  if (hitlag === null && bkb_fkb === null && kbg === null && angle === null) {
+    return <div></div>;
+  }
+  else {
+    return <div>
+      <Row className="mb-2">
+        <Col className="statsTitleSecondary">Hit</Col>
+      </Row>
+      <Row className="mb-2 pl-2">
+        <Col xs={3} sm={3}><div className="statsTitle">Hitlag:</div></Col>
+        <Col xs={4} sm={2} className="text-left"><div className="statsText">{hitlag}</div></Col>
+      </Row>
+      <Row className="mb-4 text-left pl-2">
+        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Base KB:</div></Col>
+        <Col xs={8}><div className="statsText mb-1">{bkb_fkb}</div></Col>
+        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">KB Growth:</div></Col>
+        <Col xs={8}><div className="statsText mb-1">{kbg}</div></Col>
+        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Angle:</div></Col>
+        <Col xs={8}><div className="statsText">{angle}</div></Col>
+      </Row>
+    </div>
+  }
+}
+
+function RenderNotes({ notes }) {
+  if (notes === null) {
+    return <div></div>;
+  }
+  else {
+    return <div>
+      <Row className="text-left mb-2 mt-4">
+        <Col xs={3}><div className="statsTitleSecondary">Notes: </div></Col>
+      </Row>
+      <Row className="text-left pl-2">
+        <Col><div className="notesText">{notes}</div></Col>
+      </Row>
+    </div>
+  }
+}
+
 function MoveBox(props) {
 
   if (props.data !== null) {
@@ -130,12 +195,12 @@ function MoveBox(props) {
             <Col xs={12} lg={8}>
               <Container className="borderedMoveData">
                 <Row className="text-left mt-3 mb-3 pl-3">
-                  <Col><div className="baseDmg">{props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div></Col>
+                  <Col><div className="baseDmg">{props.data.base_damage === null ? '' : props.data.base_damage + '%'}</div></Col>
                 </Row>
                 <Row className="text-left mb-3 pl-3">
-                  <Col><div className="frameText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</div></Col>
-                  <Col><div className="frameText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div></Col>
-                  <Col xs={6} sm={6} className="frameText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</Col>
+                  <Col xs={4} > <div className="frameText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</div></Col>
+                  <Col><div className="frameText">Endlag: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div></Col>
+                  <Col xs={3} className="frameText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</Col>
                 </Row>
                 <Row>
                   <Col className="timelineCol">
@@ -147,39 +212,16 @@ function MoveBox(props) {
                 <Row className="moreStats mb-3">
                   <Col>
                     <Container className="text-left pl-2">
-                      <Row className="mb-2 mt-2">
-                        <Col className="statsTitleSecondary">Hit</Col>
-                      </Row>
-                      <Row className="mb-2 pl-2">
-                        <Col xs={3} sm={3}><div className="statsTitle">Hitlag:</div></Col>
-                        <Col xs={4} sm={2} className="text-left"><div className="statsText">{props.data.hitlag}</div></Col>
-                      </Row>
-                      <Row className="mb-4 text-left pl-2">
-                        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Base KB:</div></Col>
-                        <Col xs={8}><div className="statsText mb-1">{props.data.bkb_fkb}</div></Col>
-                        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">KB Growth:</div></Col>
-                        <Col xs={8}><div className="statsText mb-1">{props.data.kbg}</div></Col>
-                        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Angle:</div></Col>
-                        <Col xs={8}><div className="statsText">{props.data.angle}</div></Col>
-                      </Row>
-                      <Row className="mb-2">
-                        <Col className="statsTitleSecondary">Shield</Col>
-                      </Row>
-                      <Row className="mb-3 pl-2">
-                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Lag:</div></Col>
-                        <Col xs={8} className="mb-1"><div className="statsText">{props.data.shieldlag}</div></Col>
-                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Stun:</div></Col>
-                        <Col xs={8} className="mb-1"><div className="statsText">{props.data.shieldstun}</div></Col>
-                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Damage:</div></Col>
-                        <Col xs={8} className="mb-1"><div className="statsText">{props.data.shield_dmg}</div></Col>
-                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Advantage:</div></Col>
-                        <Col xs={8}><div className="statsText">{props.data.advantage}</div></Col>
-                      </Row>
-                      <Row className="text-left mb-2 mt-4">
-                        <Col xs={3}><div className="statsTitleSecondary">Notes: </div></Col>
-                      </Row>
-                      <Row className="text-left pl-2">
-                        <Col><div className="notesText">{props.data.notes}</div></Col>
+                      <Row className="bottomStats mt-3 ml-3">
+                        <Col sm={6}>
+                          <RenderHitData hitlag={props.data.hitlag} bkb_fkb={props.data.bkb_fkb} kbg={props.data.kbg} angle={props.data.angle} />
+                        </Col>
+                        <Col sm={6}>
+                          <RenderShieldData lag={props.data.shieldlag} stun={props.data.shieldstun} dmg={props.data.shield_dmg} advantage={props.data.advantage} />
+                        </Col>
+                        <Col>
+                          <RenderNotes notes={props.data.notes} />
+                        </Col>
                       </Row>
                     </Container>
                   </Col>
