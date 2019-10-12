@@ -58,15 +58,17 @@
 }
 
 .moveBox .baseDmg {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2.5em;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2.6em;
   line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
-  color: #90A4AE;
+  color: black;
   border-radius: 4px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: rgb(255, 255, 255);
 }
 
 .moveBox .sosText {
@@ -82,29 +84,7 @@
   display: none;
 }
 
-.moveBox .startupText {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.3em;
-  line-height: 95.62%;
-  letter-spacing: -0.065em;
-  text-transform: capitalize;
-  color: #90A4AE;
-}
-
-.moveBox .activeText {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.3em;
-  line-height: 95.62%;
-  letter-spacing: -0.065em;
-  text-transform: capitalize;
-  color: #90A4AE;
-}
-
-.moveBox .recoveryText {
+.moveBox .frameText {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -146,6 +126,13 @@
   line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: capitalize;
+  white-space: pre;
+  overflow-wrap: break-word;
+}
+
+.moveBox .moreStats .notesText {
+  white-space: normal;
+  font-weight: normal;
 }
 
 .moveBox .statsTitle {
@@ -156,6 +143,7 @@
 .moveBox .statsText {
   color: #425055;
   display: inline;
+  font-weight: normal;
 }
 
 /* Startup, Active, Recovery Bars */
@@ -207,6 +195,8 @@
 @media screen and (max-width: 500px) {
   .moveBox {
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
   .moveBox .name {
     font-size: 2.0em;
@@ -218,15 +208,9 @@
     font-size: 1.4em;
   }
   .moveBox .baseDmg {
-    font-size: 1.6em;
+    font-size: 2.0em;
   }
-  .moveBox .startupText {
-    font-size: 1.2em;
-  }
-  .moveBox .activeText {
-    font-size: 1.2em;
-  }
-  .moveBox .recoveryText {
+  .moveBox .frameText {
     font-size: 1.2em;
   }
   .moveBox .frameContainer {

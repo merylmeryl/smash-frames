@@ -20,13 +20,6 @@ var isNumStartupEqualToNumActive = (startup, active) => {
   return startup.split('/').length === active.split('/').length;
 }
 
-var spacesToNewlines = (str) => {
-  if (str !== null) {
-    return str.replace(' ', '\n');
-  }
-  return null;
-}
-
 var computeRecovery = (startup, active, total) => {
   if (startup !== null && active !== null && total !== null
     && startup !== undefined && active !== undefined && total !== undefined) {
@@ -136,13 +129,13 @@ function MoveBox(props) {
             </Col>
             <Col xs={12} lg={8}>
               <Container className="borderedMoveData">
-                <Row className="text-left mt-3 mb-3">
-                  <Col xs={6} sm={6} className="totalFramesText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</Col>
-                  <Col><div className="baseDmg">Dmg: {props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div></Col>
+                <Row className="text-left mt-3 mb-3 pl-3">
+                  <Col><div className="baseDmg">{props.data.base_damage === null ? '0%' : props.data.base_damage + '%'}</div></Col>
                 </Row>
                 <Row className="text-left mb-3 pl-3">
-                  <Col><div className="activeText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active + ' frames') : props.data.hitbox_frames}</div></Col>
-                  <Col><div className="startupText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div></Col>
+                  <Col><div className="frameText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</div></Col>
+                  <Col><div className="frameText">Recovery: {computeRecovery(props.data.startup_frames, props.data.hitbox_active, props.data.total_frames)}</div></Col>
+                  <Col xs={6} sm={6} className="frameText">FAF: {props.data.total_frames === null ? '' : parseLastHitInt(props.data.total_frames) + 1}</Col>
                 </Row>
                 <Row>
                   <Col className="timelineCol">
@@ -153,37 +146,40 @@ function MoveBox(props) {
                 </Row>
                 <Row className="moreStats mb-3">
                   <Col>
-                    <Container className="text-left pl-0">
-                      <Row className="mb-2">
+                    <Container className="text-left pl-2">
+                      <Row className="mb-2 mt-2">
+                        <Col className="statsTitleSecondary">Hit</Col>
+                      </Row>
+                      <Row className="mb-2 pl-2">
                         <Col xs={3} sm={3}><div className="statsTitle">Hitlag:</div></Col>
                         <Col xs={4} sm={2} className="text-left"><div className="statsText">{props.data.hitlag}</div></Col>
                       </Row>
-                      <Row className="mb-4 text-left">
-                        <Col xs={4} sm={3} className="pr-0"><div className="statsTitle">Base KB:</div></Col>
-                        <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.bkb_fkb)}</div></Col>
-                        <Col xs={4} sm={3} className="pr-0"><div className="statsTitle">KB Growth:</div></Col>
-                        <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.kbg)}</div></Col>
-                        <Col xs={4} sm={3} className="pr-0"><div className="statsTitle">Angle:</div></Col>
-                        <Col xs={8} sm={3}><div className="statsText">{spacesToNewlines(props.data.angle)}</div></Col>
+                      <Row className="mb-4 text-left pl-2">
+                        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Base KB:</div></Col>
+                        <Col xs={8}><div className="statsText mb-1">{props.data.bkb_fkb}</div></Col>
+                        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">KB Growth:</div></Col>
+                        <Col xs={8}><div className="statsText mb-1">{props.data.kbg}</div></Col>
+                        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Angle:</div></Col>
+                        <Col xs={8}><div className="statsText">{props.data.angle}</div></Col>
                       </Row>
                       <Row className="mb-2">
                         <Col className="statsTitleSecondary">Shield</Col>
                       </Row>
-                      <Row className="mb-3 pl-3">
-                        <Col xs={3}><div className="statsTitle">Lag:</div></Col>
-                        <Col xs={9}><div className="statsText">{props.data.shieldlag}</div></Col>
-                        <Col xs={3}><div className="statsTitle">Stun:</div></Col>
-                        <Col xs={9}><div className="statsText">{props.data.shieldstun}</div></Col>
-                        <Col xs={3}><div className="statsTitle">Damage:</div></Col>
-                        <Col xs={9}><div className="statsText">{props.data.shield_dmg}</div></Col>
-                        <Col xs={3}><div className="statsTitle">Advantage:</div></Col>
-                        <Col xs={9}><div className="statsText">{props.data.advantage}</div></Col>
+                      <Row className="mb-3 pl-2">
+                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Lag:</div></Col>
+                        <Col xs={8} className="mb-1"><div className="statsText">{props.data.shieldlag}</div></Col>
+                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Stun:</div></Col>
+                        <Col xs={8} className="mb-1"><div className="statsText">{props.data.shieldstun}</div></Col>
+                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Damage:</div></Col>
+                        <Col xs={8} className="mb-1"><div className="statsText">{props.data.shield_dmg}</div></Col>
+                        <Col xs={4}><div className="statsTitle mb-1 pr-0">Advantage:</div></Col>
+                        <Col xs={8}><div className="statsText">{props.data.advantage}</div></Col>
                       </Row>
-                      <Row className="text-left mb-2">
+                      <Row className="text-left mb-2 mt-4">
                         <Col xs={3}><div className="statsTitleSecondary">Notes: </div></Col>
                       </Row>
-                      <Row className="text-left pl-3">
-                        <Col><div className="statsText">{props.data.notes}</div></Col>
+                      <Row className="text-left pl-2">
+                        <Col><div className="notesText">{props.data.notes}</div></Col>
                       </Row>
                     </Container>
                   </Col>
