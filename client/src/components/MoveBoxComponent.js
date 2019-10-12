@@ -111,29 +111,6 @@ function RenderBars({ startup, active, total }) {
   )
 }
 
-function RenderShieldData({ lag, stun, dmg, advantage }) {
-  if (lag === null && stun === null && dmg === null && advantage === null) {
-    return <div></div>;
-  }
-  else {
-    return <div>
-      <Row className="mb-2">
-        <Col className="statsTitleSecondary">Shield</Col>
-      </Row>
-      <Row className="mb-3 pl-2">
-        <Col xs={4}><div className="statsTitle mb-1 pr-0">Lag:</div></Col>
-        <Col xs={8} className="mb-1"><div className="statsText">{lag}</div></Col>
-        <Col xs={4}><div className="statsTitle mb-1 pr-0">Stun:</div></Col>
-        <Col xs={8} className="mb-1"><div className="statsText">{stun}</div></Col>
-        <Col xs={4}><div className="statsTitle mb-1 pr-0">Damage:</div></Col>
-        <Col xs={8} className="mb-1"><div className="statsText">{dmg}</div></Col>
-        <Col xs={4}><div className="statsTitle mb-1 pr-0">Advantage:</div></Col>
-        <Col xs={8}><div className="statsText">{advantage}</div></Col>
-      </Row>
-    </div>
-  }
-}
-
 function RenderHitData({ hitlag, bkb_fkb, kbg, angle }) {
   if (hitlag === null && bkb_fkb === null && kbg === null && angle === null) {
     return <div></div>;
@@ -148,12 +125,35 @@ function RenderHitData({ hitlag, bkb_fkb, kbg, angle }) {
         <Col xs={4} sm={2} className="text-left"><div className="statsText">{hitlag}</div></Col>
       </Row>
       <Row className="mb-4 text-left pl-2">
-        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Base KB:</div></Col>
-        <Col xs={8}><div className="statsText mb-1">{bkb_fkb}</div></Col>
-        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">KB Growth:</div></Col>
-        <Col xs={8}><div className="statsText mb-1">{kbg}</div></Col>
-        <Col xs={4} className="pr-0 mb-1"><div className="statsTitle">Angle:</div></Col>
-        <Col xs={8}><div className="statsText">{angle}</div></Col>
+        <Col xs={4} sm={5} className="pr-0 mb-2"><div className="statsTitle">Base KB:</div></Col>
+        <Col xs={8} sm={7} className="mb-2"><div className="statsText">{bkb_fkb}</div></Col>
+        <Col xs={4} sm={5} className="pr-0 mb-2"><div className="statsTitle">KB Growth:</div></Col>
+        <Col xs={8} sm={7} className="mb-2"><div className="statsText">{kbg}</div></Col>
+        <Col xs={4} sm={5} className="pr-0 mb-2"><div className="statsTitle">Angle:</div></Col>
+        <Col xs={8} sm={7}><div className="statsText">{angle}</div></Col>
+      </Row>
+    </div>
+  }
+}
+
+function RenderShieldData({ lag, stun, dmg, advantage }) {
+  if (lag === null && stun === null && dmg === null && advantage === null) {
+    return <div></div>;
+  }
+  else {
+    return <div>
+      <Row className="mb-2">
+        <Col className="statsTitleSecondary">Shield</Col>
+      </Row>
+      <Row className="mb-3 pl-2">
+        <Col xs={4} sm={5} className="mb-2"><div className="statsTitle pr-0">Lag:</div></Col>
+        <Col xs={8} sm={7} className="mb-2"><div className="statsText">{lag}</div></Col>
+        <Col xs={4} sm={5} className="mb-2"><div className="statsTitle pr-0">Stun:</div></Col>
+        <Col xs={8} sm={7} className="mb-2"><div className="statsText">{stun}</div></Col>
+        <Col xs={4} sm={5} className="mb-2"><div className="statsTitle pr-0">Damage:</div></Col>
+        <Col xs={8} sm={7} className="mb-2"><div className="statsText">{dmg}</div></Col>
+        <Col xs={4} sm={5} className="mb-2"><div className="statsTitle pr-0">Advantage:</div></Col>
+        <Col xs={8} sm={7}><div className="statsText">{advantage}</div></Col>
       </Row>
     </div>
   }
