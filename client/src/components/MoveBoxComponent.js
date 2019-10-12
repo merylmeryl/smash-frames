@@ -196,6 +196,7 @@ function MoveBox(props) {
               <Container className="borderedMoveData">
                 <Row className="text-left mt-3 mb-3 pl-3">
                   <Col><div className="baseDmg">{props.data.base_damage === null ? '' : props.data.base_damage + '%'}</div></Col>
+                  <Col><div className="selfDmg">{props.data.self_dmg === null ? '' : props.data.self_dmg + '%'}</div></Col>
                 </Row>
                 <Row className="text-left mb-3 pl-3">
                   <Col xs={4} > <div className="frameText">Active: {props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</div></Col>
