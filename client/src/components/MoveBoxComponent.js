@@ -34,7 +34,7 @@ var computeRecovery = (startup, active, total) => {
 var barWidth = 1;
 var noHitMoveTypes = ['N-Air Dodge', 'D-Air Dodge', 'DD-Air Dodge', 'S-Air Dodge', 'DU-Air Dodge', 'Du-Air Dodge', 'U-Air Dodge'];
 
-function RenderBars({ startup, active, total }) {
+function RenderBars({ moveType, startup, active, total, name }) {
 
   // Shared variable for frame iteration (startup, active, recovery)
   var f = 0;
@@ -49,6 +49,16 @@ function RenderBars({ startup, active, total }) {
 
     return <div></div>
   }
+  if (moveType === null || moveType === undefined) {
+    moveType = '';
+  }
+  var activeClassName = "bar active";
+  // If it's a dodge, color the ACTIVE bars blue instead of green
+  if (moveType.toLowerCase().includes('dodge')
+    || moveType.toLowerCase().includes('roll')) {
+    activeClassName = "bar invulnerable";
+  }
+
   // Break up multihits into arrays
   var startupFrames = parseMultihit(startup);
   var activeFrames = parseMultihit(active);
@@ -83,7 +93,7 @@ function RenderBars({ startup, active, total }) {
       frameBar.push(
         <div
           key={'a' + f + generateKey(f)}
-          className="bar active"
+          className={activeClassName}
           style={{
             left: f * barWidth + '%',
           }}>
@@ -206,7 +216,7 @@ function MoveBox(props) {
                 <Row>
                   <Col className="timelineCol">
                     <div className="timelineBackground">
-                      <RenderBars key={props.data.move_id} moveName={props.data.move_name} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
+                      <RenderBars key={props.data.move_id} moveType={props.data.move_type} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
                     </div>
                   </Col>
                 </Row>

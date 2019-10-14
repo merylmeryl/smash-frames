@@ -81,8 +81,8 @@
   color: black;
   border-radius: 4px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(48, 26, 36);
-  -webkit-text-fill-color: rgb(141, 35, 35);
+  -webkit-text-stroke-color: rgb(43, 18, 29);
+  -webkit-text-fill-color: rgb(190, 42, 42);
 }
 
 .moveBox .sosText {
@@ -116,7 +116,7 @@
   font-size: 1.3em;
   line-height: 95.62%;
   letter-spacing: -0.065em;
-  text-transform: capitalize;
+  text-transform: normal;
   color: #90A4AE;
 }
 
@@ -147,6 +147,7 @@
 .moveBox .moreStats .notesText {
   white-space: normal;
   font-weight: normal;
+  text-transform: none;
 }
 
 .moveBox .statsTitle {
@@ -178,7 +179,11 @@
 }
 
 .bar.recovery {
-  background: #E31919;
+  background: rgb(211, 80, 80);
+}
+
+.bar.invulnerable {
+  background: rgb(113, 111, 224);
 }
 
 .frameContainer {

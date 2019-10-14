@@ -23,7 +23,7 @@ class Members extends React.Component {
           <Row><Col><p><b>EyeDonutz:</b> Hitbox and frame data</p></Col></Row>
           <Row><Col><p><b>Isabella J:</b> Hitbox visualizations</p></Col></Row>
           <Row><Col><p><b>Struggleton:</b> Hitbox visualizations</p></Col></Row>
-          <Row><Col><p><b>Meshima:</b> Hitbox visualizations</p></Col></Row>
+          <Row><Col><p><b>Foxy Joe:</b> Hitbox visualizations</p></Col></Row>
         </Container>
       </div>
     )
