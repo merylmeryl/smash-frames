@@ -34,7 +34,7 @@ var computeRecovery = (startup, active, total) => {
 var barWidth = 1;
 var noHitMoveTypes = ['N-Air Dodge', 'D-Air Dodge', 'DD-Air Dodge', 'S-Air Dodge', 'DU-Air Dodge', 'Du-Air Dodge', 'U-Air Dodge'];
 
-function RenderBars({ moveType, startup, active, total, name }) {
+function RenderBars({ moveName, moveType, startup, active, total, name }) {
 
   // Shared variable for frame iteration (startup, active, recovery)
   var f = 0;
@@ -52,10 +52,18 @@ function RenderBars({ moveType, startup, active, total, name }) {
   if (moveType === null || moveType === undefined) {
     moveType = '';
   }
+  if (moveName === null || moveName === undefined) {
+    moveName = '';
+  }
   var activeClassName = "bar active";
   // If it's a dodge, color the ACTIVE bars blue instead of green
   if (moveType.toLowerCase().includes('dodge')
-    || moveType.toLowerCase().includes('roll')) {
+    || moveType.toLowerCase().includes('roll')
+    || moveType.toLowerCase().includes('neutral get-up')
+    || moveType.toLowerCase().includes('neutral ledge get-up')
+    || moveType.toLowerCase().includes('ledge jump')
+    || moveType.toLowerCase().includes('ledge get-up jump')
+    || moveName.toLowerCase().includes('power of flight')) {
     activeClassName = "bar invulnerable";
   }
 
@@ -216,7 +224,7 @@ function MoveBox(props) {
                 <Row>
                   <Col className="timelineCol">
                     <div className="timelineBackground">
-                      <RenderBars key={props.data.move_id} moveType={props.data.move_type} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
+                      <RenderBars key={props.data.move_id} moveName={props.data.move_name} moveType={props.data.move_type} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
                     </div>
                   </Col>
                 </Row>
