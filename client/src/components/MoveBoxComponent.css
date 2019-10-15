@@ -169,17 +169,18 @@
   height: 30px;
   top: 0px;
   bottom: 0px;
-  background: #FFED65;
+  background: #B7C7CC;
   border: 1px transparent;
   border-radius: 4px;
 }
 
 .bar.active {
-  background: #00CC44;
+  /*background: #00CC44;*/
+  background: rgb(211, 80, 80);
 }
 
 .bar.recovery {
-  background: rgb(211, 80, 80);
+  background: #B7C7CC;
 }
 
 .bar.invulnerable {
