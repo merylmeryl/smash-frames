@@ -24,6 +24,10 @@ export default class AdComponent extends React.Component {
               <iframe style={{ width: '120px', height: '240px' }} marginWidth="0" marginHeight="0" scrolling="no" frameBorder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=pakobird-20&marketplace=amazon&region=US&placement=B07PC7X38X&asins=B07PC7X38X&linkId=ac8b9a041596831ecf8b6dd46a5e3b0b&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=16abb8&bg_color=ffffff">
               </iframe>
             </Col>
+            <Col>
+              <iframe style={{ width: '120px', height: '240px' }} marginWidth="0" marginHeight="0" scrolling="no" frameBorder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=pakobird-20&marketplace=amazon&region=US&placement=B01MS6MO77&asins=B01MS6MO77&linkId=4ae5258b715d0e93f3f12053648fb72d&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=16abb8&bg_color=ffffff">
+              </iframe>
+            </Col>
             {/* <Col>
               <ins className="adsbygoogle"
                 style={{ display: 'inline-block', width: '728px', height: '90px' }}

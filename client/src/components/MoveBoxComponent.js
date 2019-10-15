@@ -63,7 +63,8 @@ function RenderBars({ moveName, moveType, startup, active, total, name }) {
     || moveType.toLowerCase().includes('neutral ledge get-up')
     || moveType.toLowerCase().includes('ledge jump')
     || moveType.toLowerCase().includes('ledge get-up jump')
-    || moveName.toLowerCase().includes('power of flight')) {
+    || moveName.toLowerCase().includes('power of flight')
+    || moveName.toLowerCase().includes('kaclang')) {
     activeClassName = "bar invulnerable";
   }
 
