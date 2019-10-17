@@ -2,7 +2,7 @@
 
 .moveBox {
   width: 90%;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .moveBox .name {
@@ -86,7 +86,7 @@
 }
 
 .moveBox .sosText {
-  font-family: Roboto;
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 2.5em;
@@ -99,7 +99,7 @@
 }
 
 .moveBox .frameText {
-  font-family: Roboto;
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.3em;
@@ -110,7 +110,7 @@
 }
 
 .moveBox .notes {
-  font-family: Roboto;
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.3em;
@@ -121,7 +121,7 @@
 }
 
 .moveBox .noteContent {
-  font-family: Roboto;
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.3em;
@@ -133,7 +133,7 @@
 }
 
 .moveBox .moreStats {
-  font-family: Roboto;
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.2em;
