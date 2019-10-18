@@ -1,6 +1,6 @@
 import React from 'react';
 import FighterMenuItem from './FighterMenuItemComponent';
-import HomeHeader from './HeaderComponent';
+import HomeHeader from './HomeHeaderComponent';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import {
