@@ -1,23 +1,130 @@
 /* Big "box" that holds all the frame data (includes the title above the box) */
 
 .moveBox {
-  width: 90%;
+  width: 100%;
   font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -0.065em;
+  line-height: 95.62%;
 }
 
-.moveBox .name {
+.moveBox .darkSubtitle {
+  color: #425055;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+
+.moveBox .smallText {
+  font-size: 0.8em;
+}
+
+.moveBox .tinyText {
+  font-size: 0.87em;
+  white-space: pre;
+}
+
+.moveBox .notes {
+  white-space: normal !important;
+}
+
+.moveBox .thinText {
+  font-weight: normal;
+}
+
+.moveBox .mainStats {
+  font-weight: bold;
+  border-bottom: 2px solid #B7C7CC;
+}
+
+.moveBox .black {
+  color: #425055;
+}
+
+.moveBox .lightgray {
+  color: #B7C7CC;
+}
+
+.moveBox .darkgray {
+  color: #90A4AE;
+}
+
+.moveBox .green {
+  color: #07B440;
+}
+
+.moveBox .red {
+  color: #E31919;
+}
+
+.moveBox .graybg {
+  background: #E6ECEE;
+}
+
+.moveBox .whitebg {
+  background: white;
+}
+
+.moveBox .leftBorder {
+  border-left: 2px solid #B7C7CC;
+}
+
+.moveBox .hitboxImage {
+  border-bottom: 2px solid #B7C7CC;
+}
+
+.moveBox .blockyTitle {
+  color: white;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+  text-shadow: -1px -2px 0px rgb(16, 15, 17), 2px -2px 0px rgb(16, 15, 17), 2px 2px 0px rgb(16, 15, 17), -1px 2px 0px rgb(16, 15, 17), 3px -2px 0px rgb(16, 15, 17), 4px 4px 1px rgb(16, 15, 17);
+  font-weight: bold;
+}
+
+.moveBox .smallerBlockyTitle {
+  color: white;
+  letter-spacing: -0.065em;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  text-shadow: -1px -1px 0px rgb(16, 15, 17), 1px -1px 0px rgb(16, 15, 17), 1px 2px 0px rgb(16, 15, 17), -1px 1px 0px rgb(16, 15, 17), 1px 0px 0px rgb(16, 15, 17), 2px 2px 1px rgb(16, 15, 17);
+}
+
+/* .moveBox .moveName {
   font-style: normal;
   font-weight: 900;
   font-size: 2.5em;
-  line-height: 95.62%;
-  letter-spacing: -0.065em;
-  text-transform: capitalize;
+  background: #E31919;
+  padding: 20px 10px;
+  border-radius: 14px 14px 0px 0px;
+  border-bottom: 4px solid #BB1515;
+} */
+
+/*  shadow color was rgb(16, 15, 17), */
+
+.moveBox .moveName {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2.5em;
+  line-height: 0.9em;
+  background: rgb(44, 49, 53);
+  padding: 10px 10px;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 4px solid rgb(29, 30, 34);
 }
 
-.moveBox .borderedMoveData {
-  border: 2px solid #425055;
-  box-sizing: border-box;
-  border-radius: 10px;
+.moveBox .otherStats {
+  background: #E6ECEE;
+}
+
+.moveBox .frameRow {
+  border-left: 2px solid #B7C7CC;
+  border-radius: 0px 0px 0px 4px;
+}
+
+.moveBox .frameCol {
+  border-bottom: 2px solid #B7C7CC;
 }
 
 /* .moveBox .buttons {
@@ -42,7 +149,6 @@
   font-style: normal;
   font-weight: bold;
   font-size: 2.5em;
-  line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
   color: #90A4AE;
@@ -51,7 +157,6 @@
 .moveBox .statsTitleSecondary {
   font-weight: bold;
   font-size: 1.5em;
-  line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
   color: #90A4AE;
@@ -61,7 +166,6 @@
   font-style: italic;
   font-weight: 800;
   font-size: 2.6em;
-  line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
   color: black;
@@ -75,7 +179,6 @@
   font-style: italic;
   font-weight: 800;
   font-size: 2.6em;
-  line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
   color: black;
@@ -90,7 +193,6 @@
   font-style: normal;
   font-weight: bold;
   font-size: 2.5em;
-  line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
   color: #90A4AE;
@@ -98,34 +200,11 @@
   display: none;
 }
 
-.moveBox .frameText {
-  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.3em;
-  line-height: 95.62%;
-  letter-spacing: -0.065em;
-  text-transform: capitalize;
-  color: #90A4AE;
-}
-
-.moveBox .notes {
-  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.3em;
-  line-height: 95.62%;
-  letter-spacing: -0.065em;
-  text-transform: normal;
-  color: #90A4AE;
-}
-
 .moveBox .noteContent {
   font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.3em;
-  line-height: 95.62%;
   display: flex;
   align-items: center;
   letter-spacing: -0.065em;
@@ -137,7 +216,6 @@
   font-style: normal;
   font-weight: bold;
   font-size: 1.2em;
-  line-height: 95.62%;
   letter-spacing: -0.065em;
   text-transform: capitalize;
   white-space: pre;
@@ -165,13 +243,13 @@
 
 .bar {
   position: absolute;
-  width: 0.7%;
+  width: 0.6%;
   height: 30px;
   top: 0px;
   bottom: 0px;
   background: #B7C7CC;
   border: 1px transparent;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .bar.active {
@@ -190,11 +268,9 @@
 .frameContainer {
   height: 38px;
   position: absolute;
-  left: 0%;
-  right: 2.13%;
-  top: 6.5%;
-  bottom: 20.6%;
-  margin-left: 0.5%;
+  left: 0.4%;
+  right: 1.13%;
+  top: 2px;
 }
 
 .moveBox .timelineCol {
@@ -202,14 +278,13 @@
 }
 
 .moveBox .timelineBackground {
-  position: absolute;
-  width: 90%;
-  height: 38px;
+  position: static;
+  width: 100%;
+  height: 35px;
   left: 4%;
   background: #425055;
-  border: 2px solid #B7C7CC;
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 500px) {
@@ -218,7 +293,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .moveBox .name {
+  .moveBox .moveName {
     font-size: 2.0em;
   }
   .moveBox .totalFramesText {
@@ -236,22 +311,16 @@
   .moveBox .frameText {
     font-size: 1.2em;
   }
-  .moveBox .frameContainer {
+  /* .moveBox .frameContainer {
     left: 1px;
+  } */
+  .movebox .timelineBackground {
+    height: 30px;
   }
   .bar {
     width: 1.5%;
-    top: 0px;
+    top: 1px;
     border: 0;
     border-radius: 0;
-  }
-  .moveBox .notes {
-    display: none;
-  }
-  .moveBox .moreStats {
-    font-size: 1.0em;
-  }
-  .moveBox .bottomStats {
-    margin-left: 0px !important;
   }
 }

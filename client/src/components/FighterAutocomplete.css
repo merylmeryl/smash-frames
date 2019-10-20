@@ -1,0 +1,91 @@
+body {
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.autocompleteContainer {
+  position: fixed;
+  top: 2px;
+  width: 240px;
+  right: 8px;
+  -webkit-backface-visibility: hidden;
+  text-transform: uppercase;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 8px;
+  height: 30px;
+  font-size: 24px;
+}
+
+input {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  width: 190px;
+  height: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #B7C7CC;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #B7C7CC;
+}
+
+::placeholder {
+  color: #B7C7CC;
+}
+
+.no-suggestions {
+  color: #999;
+  padding: 0.5rem;
+}
+
+.suggestions {
+  border: 1px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  max-height: 143px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: 160px;
+  top: 65px;
+  left: -350px;
+}
+
+.suggestions li {
+  padding: 0.5rem;
+}
+
+.suggestion-active, .suggestions li:hover {
+  background-color: #fff8cb;
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestions li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+
+/* @media screen and (max-width:800px) {
+  .autocompleteContainer {
+    left: auto;
+    right: 118px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .autocompleteContainer {
+    left: auto;
+    right: 150px;
+  }
+} */

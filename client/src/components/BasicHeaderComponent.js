@@ -6,7 +6,7 @@ import {
 
 import BackArrow from './BackArrowComponent';
 
-class Header extends Component {
+class BasicHeader extends Component {
 
   constructor(props) {
     super(props);
@@ -61,4 +61,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default BasicHeader;

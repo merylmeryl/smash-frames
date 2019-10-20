@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import Header from './HeaderComponent';
+import BasicHeader from './BasicHeaderComponent';
 import {
   Navbar, Jumbotron, Row, Col, Container
 } from 'reactstrap';
@@ -13,7 +13,7 @@ class Members extends React.Component {
 
     return (
       <div className="credits centered">
-        <Header fighterCss="default" />
+        <BasicHeader fighterCss="default" />
         <Container>
           <Row className="mb-3">
             <Col xs={3} className="mb-3" style={{ fontWeight: 'bold' }}>

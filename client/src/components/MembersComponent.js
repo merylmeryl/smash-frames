@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import Header from './HeaderComponent';
+import BasicHeader from './BasicHeaderComponent';
 import {
   Navbar, Jumbotron, Row, Col, Container
 } from 'reactstrap';
@@ -13,7 +13,7 @@ class Members extends React.Component {
 
     return (
       <div className="credits centered">
-        <Header fighterCss="default" />
+        <BasicHeader fighterCss="default" />
         <Container>
           <Row className="justify-content-center"><Col md={1}><span className="buddies">∩ᶘ^ᴥ^ᶅ∩</span></Col><Col md={7}> Thanks to all of the awesome, brilliant people who work on this site!</Col><Col md={1}> <span className="buddies">∩ᶘ^ᴥ^ᶅ∩</span></Col></Row>
           <br />
@@ -24,6 +24,8 @@ class Members extends React.Component {
           <Row><Col><p><b>Isabella J:</b> Hitbox visualizations</p></Col></Row>
           <Row><Col><p><b>Struggleton:</b> Hitbox visualizations</p></Col></Row>
           <Row><Col><p><b>Foxy Joe:</b> Hitbox visualizations</p></Col></Row>
+          <Row><Col><p><b>Ruben's Data Viewer</b>https://rubendal.github.io/ssbu/#/Character The holiest of data sources</p></Col></Row>
+          <Row><Col><p><b>Sakurai and his army of nameless Sakurai-samurai, or the "Sakurai" for short...oh wait</b>For making this awesome game that caused scenes all over the world to explode with love for the game (ty ty ty for bringing Wolf back)</p></Col></Row>
         </Container>
       </div>
     )

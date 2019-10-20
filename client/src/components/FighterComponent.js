@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import Header from './HeaderComponent';
+import FighterHeader from './FighterHeaderComponent';
 import FighterCard from './FighterCardComponent';
 import MoveBox from './MoveBoxComponent';
 import AdComponent from './AdComponent';
@@ -129,22 +129,12 @@ class Fighter extends React.Component {
 
       return (
         <div>
-          <Header fighterCss={this.props.match.params.fighterName.toLowerCase()} />
+          <FighterHeader fighterCss={this.props.match.params.fighterName.toLowerCase()}
+            fighterNames={this.state.fighters.map(fighter => { return { label: fighter.fighter_name } }).sort(function (a, b) {
+              return a.label.localeCompare(b.label);
+            })} />
           <FighterCard assets={fighterAssets} />
           <Container fluid className="centered sticky">
-            {/* <Row className="moves">
-              <Col xs={1}>
-                <h3>VS</h3>
-              </Col>
-              <Col xs={2}>
-                <FormGroup>
-                  <Input type="select" onChange={this.handleChangeRivalFighter}>
-                    {this.state.fighters.length > 0 && <option>Select a rival!  (Coming Soon)</option>}
-                    {this.state.fighters.map((fighter) => <option key={fighter.fighter_id} value={fighter.fighter_id}>{fighter.fighter_name}</option>)}
-                  </Input>
-                </FormGroup>
-              </Col>
-            </Row> */}
             <Row>
               <Col>
                 <br />
@@ -153,34 +143,6 @@ class Fighter extends React.Component {
                 )}
               </Col>
             </Row>
-            {/* <Row>
-              <Col>
-                <MoveBox data={this.state.selectedMove} />
-              </Col>
-            </Row> */}
-            {/* <Row className="fighterDropdowns">
-              <Col>
-                <h1 className="display-5">Rival's Fighter</h1>
-                <FormGroup>
-                  <Input type="select" onChange={this.handleChangeRivalFighter}>
-                    {this.state.fighters.map((fighter) => <option key={fighter.fighter_id} value={fighter.fighter_id}>{fighter.fighter_name}</option>)}
-                  </Input>
-                </FormGroup>
-              </Col>
-              <Col>
-                <h1 className="display-5">Rival's Move</h1>
-                <FormGroup>
-                  <Input type="select" onChange={this.handleChangeSelectedRivalMove}>
-                    {this.state.rivalMoves.map((move) => <option key={move.id} value={move.id}>{move.move_name}</option>)}
-                  </Input>
-                </FormGroup>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <MoveBox data={this.state.selectedRivalMove} />
-              </Col>
-            </Row> */}
             <Row>
               <Col>
                 <br /><br />
@@ -191,105 +153,6 @@ class Fighter extends React.Component {
         </div>
       );
     }
-    // if (this.state.selectedRivalMove === null) {
-    //   return (
-    //     <div>
-    //       <Header fighterCss={this.props.match.params.fighterName.toLowerCase()} />
-    //       <Container fluid className="centered">
-    //         <Row className="fighterDropdowns">
-    //           <Col>
-    //             <h1 className="display-5">My Fighter</h1>
-    //             <FormGroup>
-    //               <Input type="select" onChange={this.handleChangeFighter}>
-    //                 {this.state.fighters.map((fighter, i) => <option key={fighter.fighter_id} value={fighter.fighter_id}>{fighter.fighter_name}</option>)}
-    //               </Input>
-    //             </FormGroup>
-    //           </Col>
-    //         </Row>
-    //         <Row className="fighterDropdowns">
-    //           <Col>
-    //             <h1 className="display-5">Rival's Fighter</h1>
-    //             <FormGroup>
-    //               <Input type="select" onChange={this.handleChangeRivalFighter}>
-    //                 {this.state.fighters.map((fighter) => <option key={fighter.fighter_id} value={fighter.fighter_id}>{fighter.fighter_name}</option>)}
-    //               </Input>
-    //             </FormGroup>
-    //           </Col>
-    //           <Col>
-    //             <h1 className="display-5">Rival's Move</h1>
-    //             <FormGroup>
-    //               <Input type="select" onChange={this.handleChangeSelectedRivalMove}>
-    //                 {this.state.rivalMoves.map((move) => <option key={move.id} value={move.id}>{move.move_name}</option>)}
-    //               </Input>
-    //             </FormGroup>
-    //           </Col>
-    //         </Row>
-    //         <Row className="moves">
-    //           <Col>
-    //             {this.state.moves.map((move) =>
-    //               <div key={move.id} style={{ marginBottom: '8%' }}><MoveBox data={move} /></div>
-    //             )}
-    //           </Col>
-    //         </Row>
-    //       </Container>
-    //     </div>
-    //   );
-    // }
-    // else {
-    //   return (
-    //     <div>
-    //       <Header />
-    //       <Container fluid className="centered">
-    //         <Row className="fighterDropdowns">
-    //           <Col>
-    //             <h1 className="display-5">My Fighter</h1>
-    //             <FormGroup>
-    //               <Input type="select" onChange={this.handleChangeFighter}>
-    //                 {this.state.fighters.map((fighter) => <option key={fighter.fighter_id} value={fighter.fighter_id}>{fighter.fighter_name}</option>)}
-    //               </Input>
-    //             </FormGroup>
-    //           </Col>
-    //           <Col>
-    //             <h1 className="display-5">My Move</h1>
-    //             <FormGroup>
-    //               <Input type="select" onChange={this.handleChangeSelectedMove}>
-    //                 {this.state.moves.map((move) => <option key={move.id} value={move.id}>{move.move_name}</option>)}
-    //               </Input>
-    //             </FormGroup>
-    //           </Col>
-    //         </Row>
-    //         <Row>
-    //           <Col>
-    //             <MoveBox data={this.state.selectedMove} />
-    //           </Col>
-    //         </Row>
-    //         <Row className="fighterDropdowns">
-    //           <Col>
-    //             <h1 className="display-5">Rival's Fighter</h1>
-    //             <FormGroup>
-    //               <Input type="select" onChange={this.handleChangeRivalFighter}>
-    //                 {this.state.fighters.map((fighter) => <option key={fighter.fighter_id} value={fighter.fighter_id}>{fighter.fighter_name}</option>)}
-    //               </Input>
-    //             </FormGroup>
-    //           </Col>
-    //           <Col>
-    //             <h1 className="display-5">Rival's Move</h1>
-    //             <FormGroup>
-    //               <Input type="select" onChange={this.handleChangeSelectedRivalMove}>
-    //                 {this.state.rivalMoves.map((move) => <option key={move.id} value={move.id}>{move.move_name}</option>)}
-    //               </Input>
-    //             </FormGroup>
-    //           </Col>
-    //         </Row>
-    //         <Row>
-    //           <Col>
-    //             <MoveBox data={this.state.selectedRivalMove} />
-    //           </Col>
-    //         </Row>
-    //       </Container>
-    //     </div>
-    //   );
-    // }
 
   }
 }
