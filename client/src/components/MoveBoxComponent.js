@@ -28,7 +28,7 @@ const MoveBox = (props) => {
                 {props.data.move_name}: {props.data.base_damage === null ? '' : props.data.base_damage + '%'}
               </div>
             </Col>
-            <Col xs={2} className="pt-3">
+            <Col xs={2} className="pt-2">
               <label className="switch">
                 <input type="checkbox" defaultChecked={false} onClick={toggle} />
                 <span className="slider round"></span>
@@ -38,7 +38,7 @@ const MoveBox = (props) => {
           <Collapse isOpen={collapse}>
             <div>
               <Row className="text-left px-0">
-                <Col md={4} className="px-0 leftBorder">
+                <Col lg={4} className="px-0 leftBorder">
                   <img className="img-fluid hitboxImage" src={props.data.hitbox_img === null ? '' : props.data.hitbox_img} />
                 </Col>
                 <Col className="graybg px-0 mx-0">
@@ -56,70 +56,70 @@ const MoveBox = (props) => {
                       <span>Dmg:</span> {props.data.shield_dmg === null ? '-' : props.data.shield_dmg}
                     </Col>
                     <Col className="smallText">
-                      <span className="black">Advantage: <span className="thinText">{props.data.advantage}</span></span>
+                      <span className="black">Adv: <span className="thinText">{props.data.advantage}</span></span>
                     </Col>
                   </Row>
-                  <Row className="pt-3 mb-2 darkgray">
-                    <Col>
+                  <Row className="pt-2 px-0 mb-2 darkgray">
+                    <Col className="px-0">
                       <Row className="mb-2">
-                        <Col className="tinyText">
+                        <Col className="tinyText mb-2 pl-0">
                           <Row>
-                            <Col>
+                            <Col xs={12}>
                               <b>Angle:</b>
                             </Col>
-                            <Col>
+                            <Col xs={12}>
                               {props.data.angle}
                             </Col>
                           </Row>
                         </Col>
-                        <Col className="tinyText">
+                        <Col className="tinyText mb-2 pl-0">
                           <Row>
-                            <Col>
+                            <Col xs={12}>
                               <b>KB Growth:</b>
                             </Col>
-                            <Col>
+                            <Col xs={12}>
                               {props.data.kbg}
                             </Col>
                           </Row>
                         </Col>
-                        <Col className="tinyText">
+                        <Col className="tinyText mb-2 pl-0">
                           <Row>
-                            <Col>
+                            <Col xs={12}>
                               <b>Shield Lag:</b>
                             </Col>
-                            <Col>
+                            <Col xs={12}>
                               {props.data.shieldlag}
                             </Col>
                           </Row>
                         </Col>
                       </Row>
                       <Row className="mb-2">
-                        <Col className="tinyText">
+                        <Col className="tinyText mb-2 pl-0">
                           <Row>
-                            <Col>
+                            <Col xs={12}>
                               <b>Base KB:</b>
                             </Col>
-                            <Col>
+                            <Col xs={12}>
                               {props.data.bkb_fkb}
                             </Col>
                           </Row>
                         </Col>
-                        <Col className="tinyText">
+                        <Col className="tinyText mb-2 pl-0">
                           <Row>
-                            <Col>
+                            <Col xs={12}>
                               <b>Hitlag:</b>
                             </Col>
-                            <Col>
+                            <Col xs={12}>
                               {props.data.hitlag}
                             </Col>
                           </Row>
                         </Col>
-                        <Col className="tinyText">
+                        <Col className="tinyText mb-2 pl-0">
                           <Row>
-                            <Col>
+                            <Col xs={12}>
                               <b>Shield Stun: </b>
                             </Col>
-                            <Col>
+                            <Col xs={12}>
                               {props.data.shieldstun}
                             </Col>
                           </Row>
@@ -127,7 +127,7 @@ const MoveBox = (props) => {
                       </Row>
                     </Col>
                     <Col lg={4}>
-                      <span className="darkSubtitle darkgray">Notes:</span> <br /><span className="tinyText notes">{props.data.notes}</span>
+                      <span className="tinytext darkgray">Notes:</span> <br /><span className="tinyText notes">{props.data.notes}</span>
                     </Col>
                   </Row>
                   {/* <Row>
@@ -148,12 +148,10 @@ const MoveBox = (props) => {
           </Collapse>
           <Row className="text-left py-0 frameRow">
             <Col xs={12} lg={4} className="smallerBlockyTitle frameCol">
-              Active: <span className="red">{props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</span>
+              Active: <span>{props.data.hitbox_frames === null ? (props.data.hitbox_active) : props.data.hitbox_frames}</span>
             </Col>
             <Col style={{ paddingRight: '1px', paddingLeft: '1px' }}>
-              <div className="timelineBackground">
-                <RenderBars key={props.data.move_id} moveName={props.data.move_name} moveType={props.data.move_type} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
-              </div>
+              <RenderBars key={props.data.move_id} moveName={props.data.move_name} moveType={props.data.move_type} startup={props.data.startup_frames} active={props.data.hitbox_active} total={props.data.total_frames} />
             </Col>
           </Row>
           {/* <Row className="text-left mb-3 pl-3">

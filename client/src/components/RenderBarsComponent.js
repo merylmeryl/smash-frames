@@ -4,8 +4,6 @@ import {
   isNumStartupEqualToNumActive, computeRecovery
 } from '../utilities/utilities';
 
-var barWidth = 0.8;
-
 class RenderBars extends React.Component {
 
   render() {
@@ -16,6 +14,14 @@ class RenderBars extends React.Component {
     var total = this.props.total;
     var moveName = this.props.moveName;
     var moveType = this.props.moveType;
+
+    var baseHeight = 35;
+    var baseX = 3;
+    var baseSpacing = 3;
+    var y = 2;
+    var baseWidth = 6;
+    var totalWidth = 1000;
+    var totalHeight = baseHeight + y * 2;
 
 
     // 1. Check to make sure the number of "startups" is equal to the number of "hitbox_actives" -
@@ -61,12 +67,14 @@ class RenderBars extends React.Component {
       // Draw startup frames
       for (f; f < numStartup; f++) {
         frameBar.push(
-          <div key={generateKey(f)}
-            className="bar startup"
-            style={{
-              left: f * barWidth + '%',
-            }}>
-          </div>
+          <rect key={generateKey(f)}
+            width={baseWidth}
+            height={baseHeight}
+            rx="2"
+            fill="#c2cdd0"
+            x={(baseX + ((baseWidth + baseSpacing) * f)).toString()}
+            y={y}
+          />
         );
       }
 
@@ -79,13 +87,14 @@ class RenderBars extends React.Component {
       // Draw active frames
       for (f; f < numStartup + numActive - 1; f++) {
         frameBar.push(
-          <div
-            key={'a' + f + generateKey(f)}
-            className={activeClassName}
-            style={{
-              left: f * barWidth + '%',
-            }}>
-          </div>
+          <rect key={generateKey(f)}
+            width={baseWidth}
+            height={baseHeight}
+            rx="2"
+            fill="rgb(211, 80, 80)"
+            x={(baseX + ((baseWidth + baseSpacing) * f)).toString()}
+            y={y}
+          />
         );
       }
     }
@@ -93,18 +102,23 @@ class RenderBars extends React.Component {
     // Draw recovery frames
     for (f; f < total; f++) {
       frameBar.push(
-        <div key={'r' + f + generateKey(f)}
-          className="bar recovery"
-          style={{
-            left: f * barWidth + '%',
-          }}>
-        </div>
+        <rect key={generateKey(f)}
+          width={baseWidth}
+          height={baseHeight}
+          rx="2"
+          fill="#c2cdd0"
+          x={(baseX + ((baseWidth + baseSpacing) * f)).toString()}
+          y={y}
+        />
       );
     }
 
     return (
-      <div className="frameContainer">
-        {frameBar}
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox={"0 0 " + totalWidth.toString() + " " + totalHeight.toString()} >
+          <rect width={totalWidth} height={totalHeight} fill="#425055" />
+          {frameBar}
+        </svg>
       </div>
     )
   }

@@ -139,7 +139,7 @@ class Fighter extends React.Component {
               <Col>
                 <br />
                 {this.state.moves.map((move) =>
-                  <div key={move.id}><MoveBox data={move} /></div>
+                  <div key={move.id}><MoveBox data={move} className="mb-2" /></div>
                 )}
               </Col>
             </Row>
