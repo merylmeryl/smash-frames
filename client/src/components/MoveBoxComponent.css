@@ -7,6 +7,11 @@
   line-height: 95.62%;
 }
 
+.moveBox .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .moveBox .darkSubtitle {
   color: #425055;
   font-style: normal;
@@ -75,10 +80,12 @@
 
 .moveBox .blockyTitle {
   color: white;
+  line-height: 1.0em;
   letter-spacing: -0.065em;
   text-transform: capitalize;
   text-shadow: -1px -2px 0px rgb(16, 15, 17), 2px -2px 0px rgb(16, 15, 17), 2px 2px 0px rgb(16, 15, 17), -1px 2px 0px rgb(16, 15, 17), 3px -2px 0px rgb(16, 15, 17), 4px 4px 1px rgb(16, 15, 17);
   font-weight: bold;
+  padding-top: 8px;
 }
 
 .moveBox .smallerBlockyTitle {
@@ -107,9 +114,7 @@
   font-style: normal;
   font-weight: 900;
   font-size: 2.5em;
-  line-height: 0.9em;
   background: rgb(44, 49, 53);
-  padding: 10px 10px;
   border-radius: 4px 4px 0px 0px;
   border-bottom: 4px solid rgb(29, 30, 34);
 }
@@ -285,6 +290,67 @@
   background: #425055;
   box-sizing: border-box;
   border-radius: 2px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 9px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #425055;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: -2px;
+  bottom: 15px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: rgb(211, 80, 80);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px rgb(211, 80, 80);
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 500px) {
