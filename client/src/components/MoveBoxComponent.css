@@ -5,6 +5,14 @@
   font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: -0.065em;
   line-height: 95.62%;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
 }
 
 .moveBox .row {
@@ -289,7 +297,7 @@
   left: 4%;
   background: #425055;
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 2px 0px 2px 2px;
 }
 
 .switch {
