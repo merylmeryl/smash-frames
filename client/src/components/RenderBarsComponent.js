@@ -25,6 +25,12 @@ class RenderBars extends React.Component {
     var totalWidth = 1000;
     var totalHeight = baseHeight + y * 2;
 
+    var startupColor = "#c2cdd0";
+    var activeColor = "#e54040";
+    var recoverColor = "#90A4AE";
+    var fafColor = "#07B440";
+    var intangColor = "#237eed";
+
     // 1. Check to make sure the number of "startups" is equal to the number of "hitbox_actives" -
     //    for example, startup:         2/5/8/11
     //                 hitbox_active:   1/1/1/1
@@ -54,7 +60,7 @@ class RenderBars extends React.Component {
       moveName.toLowerCase().includes("wings of rebellion") ||
       moveName.toLowerCase().includes("kaclang")
     ) {
-      activeClassName = "bar invulnerable";
+      activeColor = intangColor;
     }
 
     // Break up multihits into arrays
@@ -75,7 +81,7 @@ class RenderBars extends React.Component {
             width={baseWidth}
             height={baseHeight}
             rx="2"
-            fill="#c2cdd0"
+            fill={startupColor}
             x={(baseX + (baseWidth + baseSpacing) * f).toString()}
             y={y}
           />
@@ -95,7 +101,7 @@ class RenderBars extends React.Component {
             key={generateKey(f)}
             width={baseWidth}
             height={baseHeight}
-            fill="#e54040"
+            fill={activeColor}
             x={(baseX + (baseWidth + baseSpacing) * f).toString()}
             y={y}
           />
@@ -110,7 +116,7 @@ class RenderBars extends React.Component {
           key={generateKey(f)}
           width={baseWidth}
           height={baseHeight}
-          fill="#90A4AE"
+          fill={recoverColor}
           x={(baseX + (baseWidth + baseSpacing) * f).toString()}
           y={y}
         />
@@ -123,7 +129,7 @@ class RenderBars extends React.Component {
         key={generateKey(f)}
         width={baseWidth}
         height={baseHeight}
-        fill="#07B440"
+        fill={fafColor}
         x={(baseX + (baseWidth + baseSpacing) * f).toString()}
         y={y}
       />
