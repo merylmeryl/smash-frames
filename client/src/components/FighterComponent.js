@@ -1,22 +1,15 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import { withRouter } from "react-router-dom";
 
-import FighterHeader from './FighterHeaderComponent';
-import FighterCard from './FighterCardComponent';
-import MoveBox from './MoveBoxComponent';
-import AdComponent from './AdComponent';
+import FighterHeader from "./FighterHeaderComponent";
+import FighterCard from "./FighterCardComponent";
+import Moves from "./MovesComponent";
+import AdComponent from "./AdComponent";
 
-import { iconData } from '../utilities/iconData';
-import { parseFighterName } from '../utilities/utilities';
+import { iconData } from "../utilities/iconData";
+import { parseFighterName } from "../utilities/utilities";
 
-
-import {
-  Container,
-  Row,
-  Col,
-  FormGroup,
-  Input
-} from 'reactstrap';
+import { Container, Row, Col, FormGroup, Input } from "reactstrap";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -32,7 +25,7 @@ class Fighter extends React.Component {
       selectedRivalMove: null,
       selectedFighter: null,
       hasError: false,
-    }
+    };
   }
 
   componentDidCatch(error, info) {
@@ -54,106 +47,113 @@ class Fighter extends React.Component {
   }
 
   getFighters = () => {
-    fetch('/api/fighters')
+    fetch("/api/fighters")
       .then(res => res.json())
       .then(res => {
-        var fighters = res.map(r => { return { fighter_id: r.id, fighter_name: r.fighter_name } });
+        var fighters = res.map(r => {
+          return { fighter_id: r.id, fighter_name: r.fighter_name };
+        });
         this.setState({ fighters });
       });
   };
 
-  getFighterByName = (fighterName) => {
+  getFighterByName = fighterName => {
     fetch(`/api/fighters/${fighterName}`)
       .then(res => res.json())
-      .then(res => res.map(r => { return { fighter_id: r.id, fighter_name: r.fighter_name } })[0])
-      .then((selectedFighter) => {
+      .then(
+        res =>
+          res.map(r => {
+            return { fighter_id: r.id, fighter_name: r.fighter_name };
+          })[0]
+      )
+      .then(selectedFighter => {
         if (selectedFighter === null || selectedFighter === undefined) {
           return null;
+        } else {
+          return this.setState({ selectedFighter: selectedFighter }, () =>
+            this.getMovesByFighter(this.state.selectedFighter.fighter_id)
+          );
         }
-        else {
-          return this.setState({ selectedFighter: selectedFighter },
-            () => this.getMovesByFighter(this.state.selectedFighter.fighter_id))
-        }
-      })
-  }
+      });
+  };
 
-  getMovesByFighter = (fighterId) => {
+  getMovesByFighter = fighterId => {
     fetch(`/api/moves/fighter/${fighterId}`)
       .then(res => res.json())
       .then(moves => {
         this.setState({ moves });
       });
-  }
+  };
 
-  getMovesByRivalFighter = (fighterId) => {
+  getMovesByRivalFighter = fighterId => {
     fetch(`/api/moves/fighter/${fighterId}`)
       .then(res => res.json())
       .then(rivalMoves => {
         this.setState({ rivalMoves });
       });
-  }
+  };
 
-  handleChangeFighter = (e) => {
+  handleChangeFighter = e => {
     this.getMovesByFighter(e.target.value);
-  }
+  };
 
-  handleChangeRivalFighter = (e) => {
+  handleChangeRivalFighter = e => {
     if (e.target.value !== "Select a rival! (Coming Soon)") {
       this.getMovesByRivalFighter(e.target.value);
     }
-  }
+  };
 
-  handleChangeSelectedMove = (e) => {
+  handleChangeSelectedMove = e => {
     let moveId = parseInt(e.target.value);
     let move = this.state.moves.find(item => item.id === moveId);
 
     this.setState({ selectedMove: move });
-  }
-  handleChangeSelectedRivalMove = (e) => {
+  };
+  handleChangeSelectedRivalMove = e => {
     let moveId = parseInt(e.target.value);
     let move = this.state.rivalMoves.find(item => item.id === moveId);
 
     this.setState({ selectedRivalMove: move });
-  }
+  };
 
   render() {
-    if (this.state.selectedFighter === null || this.state.selectedFighter === undefined || this.state.hasError) {
-      return <div>
-        <p>
-
-        </p>
-      </div>;
-    }
-    else {
-      const fighterAssets = iconData.find(fighter => fighter.name.toLowerCase() === this.state.selectedFighter.fighter_name.toLowerCase());
+    if (
+      this.state.selectedFighter === null ||
+      this.state.selectedFighter === undefined ||
+      this.state.hasError
+    ) {
+      return (
+        <div>
+          <p></p>
+        </div>
+      );
+    } else {
+      const fighterAssets = iconData.find(
+        fighter =>
+          fighter.name.toLowerCase() ===
+          this.state.selectedFighter.fighter_name.toLowerCase()
+      );
 
       return (
         <div>
-          <FighterHeader fighterCss={this.props.match.params.fighterName.toLowerCase()}
-            fighterNames={this.state.fighters.map(fighter => { return { label: fighter.fighter_name } }).sort(function (a, b) {
-              return a.label.localeCompare(b.label);
-            })} />
+          <FighterHeader
+            fighterCss={this.props.match.params.fighterName.toLowerCase()}
+            fighterNames={this.state.fighters
+              .map(fighter => {
+                return { label: fighter.fighter_name };
+              })
+              .sort(function(a, b) {
+                return a.label.localeCompare(b.label);
+              })}
+          />
           <FighterCard assets={fighterAssets} />
-          <Container fluid className="centered sticky">
-            <Row>
-              <Col>
-                <br />
-                {this.state.moves.map((move) =>
-                  <div key={move.id}><MoveBox data={move} className="mb-2" /></div>
-                )}
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <br /><br />
-                <AdComponent />
-              </Col>
-            </Row>
-          </Container>
+          <Moves
+            moves={this.state.moves}
+            fighter={this.state.selectedFighter.fighter_name.toLowerCase()}
+          />
         </div>
       );
     }
-
   }
 }
 

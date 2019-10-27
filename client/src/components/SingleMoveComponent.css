@@ -2,7 +2,7 @@
 
 .moveBox {
   width: 100%;
-  max-width: 100%;
+  max-width: 95%;
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: -0.065em;
   line-height: 95.62%;
@@ -89,13 +89,26 @@
 
 .moveBox .blockyTitle {
   color: white;
-  font-size: 1.3rem;
-  line-height: 1.3rem;
-  letter-spacing: -0.065em;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.05em;
   text-transform: capitalize;
-  text-shadow: -1px -2px 0px rgb(16, 15, 17), 2px -2px 0px rgb(16, 15, 17), 2px 2px 0px rgb(16, 15, 17), -1px 2px 0px rgb(16, 15, 17), 3px -2px 0px rgb(16, 15, 17), 4px 4px 1px rgb(16, 15, 17);
+  text-shadow:-2px -2px 0px rgb(16, 15, 17), 1px -2px 0px rgb(16, 15, 17), 2px 3px 0px rgb(16, 15, 17), -1px 2px 0px rgb(16, 15, 17), 2px -2px 0px rgb(16, 15, 17), 3px 3px 1px rgb(16, 15, 17), 3px 1px 1px rgb(16, 15, 17);
+  font-weight: bold;
+  padding-top: 8px;
+}
+
+.moveBox .blockyDmg {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+  text-shadow:
+       2px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-weight: bold;
   padding-top: 12px;
+  font-style:italic;
 }
 
 .moveBox .smallerBlockyTitle {
@@ -123,9 +136,9 @@
 .moveBox .moveName {
   font-style: normal;
   font-weight: 900;
-  background: rgb(100, 107, 123);
+  background: #399bb3;
   border-radius: 4px 4px 0px 0px;
-  border-bottom: 4px solid rgb(64, 64, 71);
+  /* border-bottom: 4px solid rgb(64, 64, 71); */
 }
 
 .moveBox .otherStats {
@@ -292,11 +305,11 @@
 }
 
 input:checked+.slider {
-  background-color: rgb(72, 192, 228);
+  background-color: #75dc5a;
 }
 
 input:focus+.slider {
-  box-shadow: 0 0 1px rgb(72, 192, 228);
+  box-shadow: 0 0 1px #75dc5a;
 }
 
 input:checked+.slider:before {
@@ -313,6 +326,14 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#shieldSvg {
+  width:16px;
+}
+
+#explosionSvg {
+  width:15px;
 }
 
 @media screen and (max-width: 500px) {

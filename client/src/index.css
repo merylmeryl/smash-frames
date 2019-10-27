@@ -9,6 +9,7 @@ body .vsc-initialized {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #e4eef1 !important;
 }
 
 .ml-1 {
@@ -59,331 +60,331 @@ body .vsc-initialized {
   height: 35px;
 }
 
-.navbar.default {
+.default {
   background: black;
 }
 
-.navbar.bayonetta {
+.bayonetta {
   background: #2E3383;
 }
 
-.navbar.samus {
+.samus {
   background: #DF5050;
 }
 
-.navbar.pikachu {
+.pikachu {
   background: #FADE45;
 }
 
-.navbar.luigi {
+.luigi {
   background: #59B23D;
 }
 
-.navbar.ness {
+.ness {
   background: #F96B6D;
 }
 
-.navbar.captain-falcon {
+.captain-falcon {
   background: #6E6C9D;
 }
 
-.navbar.jigglypuff {
+.jigglypuff {
   background: #F5BDC5;
 }
 
-.navbar.peach {
+.peach {
   background: #FA79A6;
 }
 
-.navbar.daisy {
+.daisy {
   background: #FECC62;
 }
 
-.navbar.bowser {
+.bowser {
   background: #F8AF37;
 }
 
-.navbar.ice-climbers {
+.ice-climbers {
   background: #8C7BE0;
 }
 
-.navbar.yoshi {
+.yoshi {
   background: #91DC82;
 }
 
-.navbar.dark-samus {
+.dark-samus {
   background: #4AE4F6;
 }
 
-.navbar.link {
+.link {
   background: #53C5E3;
 }
 
-.navbar.wolf {
+.wolf {
   background: #3F367C;
 }
 
-.navbar.fox {
+.fox {
   background: #FD823E;
 }
 
-.navbar.mario {
+.mario {
   background: #de4a4d;
 }
 
-.navbar.donkey-kong {
+.donkey-kong {
   background: #7A3810;
 }
 
-.navbar.banjo-and-kazooie {
+.banjo-and-kazooie {
   background: #FC415A;
 }
 
-.navbar.inkling {
+.inkling {
   background: #fd7636;
 }
 
-.navbar.kirby {
+.kirby {
   background: #F7566C;
 }
 
-.navbar.sheik {
+.sheik {
   background: #677AAB;
 }
 
-.navbar.zelda {
+.zelda {
   background: #F97DAB;
 }
 
-.navbar.dr-mario {
+.dr-mario {
   background: #190F23;
 }
 
-.navbar.charizard {
+.charizard {
   background: #F4724F;
 }
 
-.navbar.bowser-jr {
+.bowser-jr {
   background: #9BC44F;
 }
 
-.navbar.chrom {
+.chrom {
   background: #404B61;
 }
 
-.navbar.cloud {
+.cloud {
   background: #5CF3F8;
 }
 
-.navbar.corrin {
+.corrin {
   background: #D75FC9;
 }
 
-.navbar.dark-pit {
+.dark-pit {
   background: #8463F3;
 }
 
-.navbar.diddy-kong {
+.diddy-kong {
   background: #EC4848;
 }
 
-.navbar.duck-hunt {
+.duck-hunt {
   background: #584EA8;
 }
 
-.navbar.falco {
+.falco {
   background: #4E63DE;
 }
 
-.navbar.ganondorf {
+.ganondorf {
   background: #841AE0;
 }
 
-.navbar.greninja {
+.greninja {
   background: #4FCEFF;
 }
 
-.navbar.hero {
+.hero {
   background: #82A4E1;
 }
 
-.navbar.ike {
+.ike {
   background: #423D65;
 }
 
-.navbar.incineroar {
+.incineroar {
   background: #F8676B;
 }
 
-.navbar.isabelle {
+.isabelle {
   background: #F8AA1D;
 }
 
-.navbar.ivysaur {
+.ivysaur {
   background: #85DAE7;
 }
 
-.navbar.joker {
+.joker {
   background: #484E5F;
 }
 
-.navbar.joker-arsene {
+.joker-arsene {
   background: #A03356;
 }
 
-.navbar.ken {
+.ken {
   background: #D75B49;
 }
 
-.navbar.king-dedede {
+.king-dedede {
   background: #29ABFF;
 }
 
-.navbar.king-k-rool {
+.king-k-rool {
   background: #A2C28A;
 }
 
-.navbar.little-mac {
+.little-mac {
   background: #1F1F1E;
 }
 
-.navbar.lucas {
+.lucas {
   background: #F65F71;
 }
 
-.navbar.lucina {
+.lucina {
   background: #424467;
 }
 
-.navbar.lucario {
+.lucario {
   background: #4295C9;
 }
 
-.navbar.marth {
+.marth {
   background: #74A2C7;
 }
 
-.navbar.roy {
+.roy {
   background: #DB4E4B;
 }
 
-.navbar.mega-man {
+.mega-man {
   background: #8ACCF5;
 }
 
-.navbar.meta-knight {
+.meta-knight {
   background: #8A559B;
 }
 
-.navbar.mewtwo {
+.mewtwo {
   background: #7E4A6B;
 }
 
-.navbar.mii-brawler {
+.mii-brawler {
   background: #D03630;
 }
 
-.navbar.mii-gunner {
+.mii-gunner {
   background: #6C87D6;
 }
 
-.navbar.mii-swordfighter {
+.mii-swordfighter {
   background: #5978CF;
 }
 
-.navbar.mr-game-and-watch {
+.mr-game-and-watch {
   background: #010000;
 }
 
-.navbar.olimar {
+.olimar {
   background: #FCEB6A;
 }
 
-.navbar.pac-man {
+.pac-man {
   background: #FFE761;
 }
 
-.navbar.palutena {
+.palutena {
   background: #6FEAFD;
 }
 
-.navbar.pichu {
+.pichu {
   background: #FFED65;
 }
 
-.navbar.piranha-plant {
+.piranha-plant {
   background: #FF574F;
 }
 
-.navbar.pit {
+.pit {
   background: #C3C8DB;
 }
 
-.navbar.richter {
+.richter {
   background: #5576B8;
 }
 
-.navbar.ridley {
+.ridley {
   background: #8B4E72;
 }
 
-.navbar.rob {
+.rob {
   background: #B9B6B5;
 }
 
-.navbar.robin {
+.robin {
   background: #3A3643;
 }
 
-.navbar.rosalina-and-luma {
+.rosalina-and-luma {
   background: #6CCFC4;
 }
 
-.navbar.ryu {
+.ryu {
   background: #C84D4D;
 }
 
-.navbar.shulk {
+.shulk {
   background: #FF5A69;
 }
 
-.navbar.simon {
+.simon {
   background: #723E57;
 }
 
-.navbar.snake {
+.snake {
   background: #66717C;
 }
 
-.navbar.sonic {
+.sonic {
   background: #3144E1;
 }
 
-.navbar.squirtle {
+.squirtle {
   background: #9BD6EF;
 }
 
-.navbar.toon-link {
+.toon-link {
   background: #7EB455;
 }
 
-.navbar.villager {
+.villager {
   background: #F75150;
 }
 
-.navbar.wario {
+.wario {
   background: #F8CC64;
 }
 
-.navbar.wii-fit-trainer {
+.wii-fit-trainer {
   background: #68C2DA;
 }
 
-.navbar.young-link {
+.young-link {
   background: #64B359;
 }
 
-.navbar.zero-suit-samus {
+.zero-suit-samus {
   background: #64BAD9;
 }
 
