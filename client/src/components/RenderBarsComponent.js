@@ -95,7 +95,7 @@ class RenderBars extends React.Component {
             key={generateKey(f)}
             width={baseWidth}
             height={baseHeight}
-            fill="rgb(211, 80, 80)"
+            fill="#e54040"
             x={(baseX + (baseWidth + baseSpacing) * f).toString()}
             y={y}
           />
