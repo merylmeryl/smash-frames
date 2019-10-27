@@ -7,7 +7,7 @@ const HitboxImage = props => {
   }
   return (
     <React.Fragment>
-      <Col lg={5} className="px-0 leftBorder">
+      <Col lg={5} className="px-0 leftBorder hitboxContainer">
         <img className="img-fluid hitboxImage" src={props.link} />
       </Col>
     </React.Fragment>

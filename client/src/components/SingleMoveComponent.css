@@ -87,6 +87,10 @@
   /* border-bottom: 2px solid #B7C7CC; */
 }
 
+.moveBox .hitboxContainer {
+  background: #404040;
+}
+
 .moveBox .blockyTitle {
   color: white;
   font-size: 1.6rem;
