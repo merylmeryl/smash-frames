@@ -24,7 +24,6 @@ const SingleMove = props => {
   const [collapse, setCollapse] = useState(false);
 
   const toggle = () => setCollapse(!collapse);
-
   if (props.data !== null) {
     return (
       <div>
@@ -220,7 +219,7 @@ const SingleMove = props => {
             </div>
           </Collapse>
           <Row className="text-left py-0 frameRow">
-            <Col style={{ paddingRight: "1px", paddingLeft: "1px" }}>
+            <Col style={{ paddingRight: "0", paddingLeft: "0" }}>
               <RenderBars
                 key={props.data.move_id}
                 moveName={props.data.move_name}

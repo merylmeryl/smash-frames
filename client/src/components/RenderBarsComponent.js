@@ -80,7 +80,6 @@ class RenderBars extends React.Component {
             key={generateKey(f)}
             width={baseWidth}
             height={baseHeight}
-            rx="2"
             fill={startupColor}
             x={(baseX + (baseWidth + baseSpacing) * f).toString()}
             y={y}
