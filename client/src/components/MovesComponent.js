@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 
 import SingleMove from "./SingleMoveComponent";
+import "./MovesComponent.css";
 
 const RenderMoveTabs = moveData => {
   var groundMoves = [];
@@ -89,63 +90,77 @@ const Moves = props => {
   };
 
   return (
-    <div>
-      <Nav tabs>
-        <NavItem>
-          <NavLink
-            onClick={() => {
-              toggle("Ground");
-            }}
+    <React.Fragment>
+      <div className="moveTabContainer">
+        <Nav tabs>
+          <NavItem
+            className={"moveTab " + (activeTab === "Ground" ? "active" : "")}
           >
-            Ground
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            onClick={() => {
-              toggle("Aerial");
-            }}
+            <NavLink
+              onClick={() => {
+                toggle("Ground");
+              }}
+            >
+              Ground
+            </NavLink>
+          </NavItem>
+          <NavItem
+            className={"moveTab " + (activeTab === "Aerial" ? "active" : "")}
           >
-            Aerial
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            onClick={() => {
-              toggle("Special");
-            }}
+            <NavLink
+              onClick={() => {
+                toggle("Aerial");
+              }}
+            >
+              Aerial
+            </NavLink>
+          </NavItem>
+          <NavItem
+            className={"moveTab " + (activeTab === "Special" ? "active" : "")}
           >
-            Special
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            onClick={() => {
-              toggle("Grab");
-            }}
+            <NavLink
+              onClick={() => {
+                toggle("Special");
+              }}
+            >
+              Special
+            </NavLink>
+          </NavItem>
+          <NavItem
+            className={"moveTab " + (activeTab === "Grab" ? "active" : "")}
           >
-            Grab & Throw
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            onClick={() => {
-              toggle("Dodge");
-            }}
+            <NavLink
+              onClick={() => {
+                toggle("Grab");
+              }}
+            >
+              Grab & Throw
+            </NavLink>
+          </NavItem>
+          <NavItem
+            className={"moveTab " + (activeTab === "Dodge" ? "active" : "")}
           >
-            Dodge
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            onClick={() => {
-              toggle("Recover");
-            }}
+            <NavLink
+              onClick={() => {
+                toggle("Dodge");
+              }}
+            >
+              Dodge
+            </NavLink>
+          </NavItem>
+          <NavItem
+            className={"moveTab " + (activeTab === "Recover" ? "active" : "")}
           >
-            Recover
-          </NavLink>
-        </NavItem>
-      </Nav>
+            <NavLink
+              onClick={() => {
+                toggle("Recover");
+              }}
+            >
+              Recover
+            </NavLink>
+          </NavItem>
+        </Nav>
+      </div>
       <Container fluid className="centered">
         <Row>
           <Col>
@@ -165,7 +180,7 @@ const Moves = props => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -1,0 +1,24 @@
+.moveTabContainer {
+  display:flex;
+  justify-content:center;
+  text-transform: uppercase;
+  font-weight:bold;
+  color: #B7C7CC;
+  margin-top: 0.5rem;
+}
+
+.moveTabContainer>ul {
+  border: none;
+}
+
+.moveTabContainer .nav-tabs .nav-link {
+  border: none;
+}
+
+.moveTabContainer>ul>li.active {
+  color:black;
+}
+
+.moveTab {
+  cursor: pointer;
+}

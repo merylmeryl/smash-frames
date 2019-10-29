@@ -220,18 +220,6 @@
   -webkit-text-fill-color: rgb(190, 42, 42);
 }
 
-.moveBox .sosText {
-  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2.5em;
-  letter-spacing: -0.065em;
-  text-transform: uppercase;
-  color: #90A4AE;
-  border-radius: 4px;
-  display: none;
-}
-
 .moveBox .noteContent {
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
