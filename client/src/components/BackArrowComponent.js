@@ -1,39 +1,28 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import { withRouter } from 'react-router';
+import { withRouter } from "react-router";
 
 class BackArrow extends React.Component {
-
   render() {
-
     return (
       <div className="backArrow">
         <Link to="/">
-          <svg className="backHexagon" width="90" height="70" xmlns="http://www.w3.org/2000/svg">
-
-            <g>
-              <title>background</title>
-              <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1" />
-            </g>
-            <g>
-              <title>Layer 1</title>
-              <path id="svg_1" fill="#FFED65" d="m0,0l90,0l-31.5,70l-58.5,-15.5l0,-54.5z" />
-            </g>
-          </svg>
-          <svg className="arrowSvg" width="43" height="41" xmlns="http://www.w3.org/2000/svg">
-
-            <g>
-              <title>background</title>
-              <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1" />
-            </g>
-            <g>
-              <title>Layer 1</title>
-              <path id="svg_1" fill={this.props.color} d="m16.0698,0l0,8.29762l0,0.97619l15.0654,0c15.5676,0 16.0698,31.72619 0,31.72619l-9.0392,0l0,-12.5l5.524,0c3.5152,0 3.5152,-7.0238 0,-7.0238l-11.5502,0l0,9.7619l-16.0698,-15.6191l16.0698,-15.619z" />
-            </g>
-          </svg>
+          <div style={{ width: "995px" }}>
+            <svg
+              viewBox="0 0 1920 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M405 0H0V70L405 0Z" fill="#425055" />
+              <path d="M0 0H90L58.5 70L0 54.5V0Z" fill="#FFED65" />
+              <path
+                d="M31.0698 8V16.2976V17.2738H46.1352C61.7028 17.2738 62.205 49 46.1352 49H37.096V36.5H42.62C46.1352 36.5 46.1352 29.4762 42.62 29.4762H31.0698V39.2381L15 23.619L31.0698 8Z"
+                fill="#282221"
+              />
+            </svg>
+          </div>
         </Link>
       </div>
-
     );
   }
 }

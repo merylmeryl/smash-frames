@@ -42,9 +42,6 @@ body .vsc-initialized {
 
 .backArrow {
   z-index: 1000;
-}
-
-.backHexagon {
   position: absolute;
   top: 0;
   left: 0;
