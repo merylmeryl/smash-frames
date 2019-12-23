@@ -22,6 +22,7 @@ import HitboxImage from "./HitboxImageComponent";
 
 const SingleMove = props => {
   const [collapse, setCollapse] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   const toggle = () => setCollapse(!collapse);
   if (props.data !== null) {
@@ -30,17 +31,9 @@ const SingleMove = props => {
         <Container className="moveBox mb-5">
           <Row className="moveName">
             <Col className="text-left">
-              <div className="blockyTitle">{props.data.move_name}</div>
-            </Col>
-            <Col xs={2} className="pt-2">
-              <label className="switch">
-                <input
-                  type="checkbox"
-                  defaultChecked={false}
-                  onClick={toggle}
-                />
-                <span className="slider round"></span>
-              </label>
+              <div className="blockyTitle" onClick={toggle}>
+                {props.data.move_name}
+              </div>
             </Col>
           </Row>
           <Collapse isOpen={collapse}>
@@ -166,7 +159,7 @@ const SingleMove = props => {
                             <Col xs={12}>
                               <b>Shield Lag:</b>
                             </Col>
-                            <Col xs={12}>{props.data.shieldlag}</Col>
+                            <Col xs={12}>{""}</Col>
                           </Row>
                         </Col>
                       </Row>
@@ -184,7 +177,7 @@ const SingleMove = props => {
                             <Col xs={12}>
                               <b>Hitlag:</b>
                             </Col>
-                            <Col xs={12}>{props.data.hitlag}</Col>
+                            <Col xs={12}>{""}</Col>
                           </Row>
                         </Col>
                         <Col className="tinyText mb-2 pl-0">
@@ -192,7 +185,7 @@ const SingleMove = props => {
                             <Col xs={12}>
                               <b>Shield Stun: </b>
                             </Col>
-                            <Col xs={12}>{props.data.shieldstun}</Col>
+                            <Col xs={12}>{""}</Col>
                           </Row>
                         </Col>
                       </Row>

@@ -19,17 +19,18 @@ class RenderBars extends React.Component {
 
     var baseHeight = 35;
     var baseX = 3;
-    var baseSpacing = 2;
+    var baseSpacing = 1;
     var y = 2;
     var baseWidth = 5;
     var totalWidth = 1000;
     var totalHeight = baseHeight + y * 2;
 
-    var startupColor = "#c2cdd0";
-    var activeColor = "#e54040";
-    var recoverColor = "#90A4AE";
-    var fafColor = "#07B440";
-    var intangColor = "#237eed";
+    var startupColor = "#9D9D93";
+    var activeColor = "#DF151A";
+    var recoverColor = "#9D9D93";
+    var fafColor = "#87BDB1";
+    var intangColor = "#00A8C6";
+    var bgColor = "#E6DCDA";
 
     // 1. Check to make sure the number of "startups" is equal to the number of "hitbox_actives" -
     //    for example, startup:         2/5/8/11
@@ -142,7 +143,7 @@ class RenderBars extends React.Component {
             "0 0 " + totalWidth.toString() + " " + totalHeight.toString()
           }
         >
-          <rect width={totalWidth} height={totalHeight} fill="#404040" />
+          <rect width={totalWidth} height={totalHeight} fill={bgColor} />
           {frameBar}
         </svg>
       </div>
