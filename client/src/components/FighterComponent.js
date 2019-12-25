@@ -22,6 +22,7 @@ class Fighter extends React.Component {
       rivalMoves: [],
       fighters: [],
       selectedMove: null,
+      selectedRival: null,
       selectedRivalMove: null,
       selectedFighter: null,
       hasError: false,
@@ -115,6 +116,9 @@ class Fighter extends React.Component {
 
     this.setState({ selectedRivalMove: move });
   };
+  handleChangeRival = e => {
+    this.setState({ selectedRival: e.target.value });
+  };
 
   render() {
     if (
@@ -145,6 +149,7 @@ class Fighter extends React.Component {
               .sort(function(a, b) {
                 return a.label.localeCompare(b.label);
               })}
+            changeRival={this.handleChangeRival}
           />
           <FighterCard assets={fighterAssets} />
           <Moves

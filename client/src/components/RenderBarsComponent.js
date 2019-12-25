@@ -26,7 +26,7 @@ class RenderBars extends React.Component {
     var totalHeight = baseHeight + y * 2;
 
     var startupColor = "#9D9D93";
-    var activeColor = "#DF151A";
+    var activeColor = "#de4a4d";
     var recoverColor = "#9D9D93";
     var fafColor = "#87BDB1";
     var intangColor = "#00A8C6";
