@@ -10,6 +10,7 @@ import {
 
 var imgStyle = {
   width: "150px",
+  height:"99px"
 };
 
 

@@ -16,6 +16,7 @@ function Home(props) {
           src="https://smashframes-images.s3.us-east-2.amazonaws.com/155px-Smash_Ball.png"
           alt="smash ball"
           width="50"
+          height="50"
         />
         <h1>SAFE ON SHIELD</h1>
         <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
@@ -37,6 +38,7 @@ function Home(props) {
             <img
               src="https://smashframes-images.s3.us-east-2.amazonaws.com/Discord-Logo-Color.png"
               width="25"
+              height="25"
               alt="discord"
             />
             &nbsp;Join our Discord
@@ -52,6 +54,7 @@ function Home(props) {
             <img
               src="https://smashframes-images.s3.us-east-2.amazonaws.com/emblems/Patreon_logo+small.png"
               width="25"
+              height="25"
               alt="patreon"
             />
             &nbsp;Become a Patron!
