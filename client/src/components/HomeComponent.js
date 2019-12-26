@@ -15,8 +15,8 @@ function Home(props) {
         <img
           src="https://smashframes-images.s3.us-east-2.amazonaws.com/155px-Smash_Ball.png"
           alt="smash ball"
-          width="50"
-          height="50"
+          width="155"
+          height="155"
         />
         <h1>SAFE ON SHIELD</h1>
         <p className="lead">Frame data for Super Smash Bros. Ultimate</p>
