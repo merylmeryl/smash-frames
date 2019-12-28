@@ -7,17 +7,18 @@ import {
   Row,
   Col,
   Container,
-  Media,
+  Media
 } from "reactstrap";
 import {
   generateKey,
   parseLastHitInt,
   parseMultihit,
   isNumStartupEqualToNumActive,
-  computeRecovery,
+  computeRecovery
 } from "../utilities/utilities";
 
 import RenderBars from "./RenderBarsComponent";
+import DrawAnglesComponent from "./SvgComponents/DrawAnglesComponent";
 import HitboxImage from "./HitboxImageComponent";
 
 const SingleMove = props => {
@@ -141,9 +142,13 @@ const SingleMove = props => {
                         <Col className="tinyText mb-2 pl-0">
                           <Row>
                             <Col xs={12}>
-                              <b>Angle:</b>
+                              <b>Angles:</b>
                             </Col>
-                            <Col xs={12}>{props.data.angle}</Col>
+                            <Col xs={12}>
+                              <DrawAnglesComponent
+                                angleText={props.data.angle}
+                              />
+                            </Col>
                           </Row>
                         </Col>
                         <Col className="tinyText mb-2 pl-0">

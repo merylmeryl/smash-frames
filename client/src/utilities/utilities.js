@@ -71,8 +71,10 @@ export let parseLastHitInt = frames => {
   );
 };
 
-export let parseMultihit = frames => {
-  return frames.replace("...", "").split("/");
+export let parseMultihit = text => {
+  if (text !== null && text !== undefined)
+    return text.replace("...", "").split("/");
+  else return null;
 };
 
 export let isNumStartupEqualToNumActive = (startup, active) => {
