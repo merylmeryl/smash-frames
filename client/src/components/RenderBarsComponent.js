@@ -4,7 +4,7 @@ import {
   parseLastHitInt,
   parseMultihit,
   isNumStartupEqualToNumActive,
-  computeRecovery,
+  computeRecovery
 } from "../utilities/utilities";
 
 class RenderBars extends React.Component {
